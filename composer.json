@@ -5,6 +5,8 @@
             "Hexlet\\Code\\": "src/"
         }
     },
+    "description": "php-project-45",
+    "license": "MIT",
     "authors": [
         {
             "name": "Гульшат Нигматуллина",
@@ -14,5 +16,6 @@
     "require": {},
     "bin": [
             "bin/brain-games"
-]
+           ]
 }
+
