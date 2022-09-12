@@ -1,5 +1,8 @@
 #!/usr/bin/env php
 <?php
 
-$welcome = "Welcome to the Brain Games!";
-print_r($welcome . "\n");
+require_once __DIR__ . "/../vendor/autoload.php";
+
+use function BrainGames\Cli\getGreeting;
+
+getGreeting();
