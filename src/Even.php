@@ -15,7 +15,6 @@ function checkEven()
 
     $correctAnswerCount = 0;
 
-
     while($correctAnswerCount < 3) {
         
         $randomNumber = rand(1, 100);
@@ -23,12 +22,12 @@ function checkEven()
         line("Question: " . $randomNumber);
         $userResponse = prompt("You answer");
 
-        $randomNumber % 2 === 0 ? $eee = "yes" : $eee = "no";
-        if ($eee === $userResponse) {
+        $randomNumber % 2 === 0 ? $even = "yes" : $even= "no";
+        if ($even === $userResponse) {
             line("Correct!");
             $correctAnswerCount++;
         } else {
-            echo($userResponse . " is wrong answer ;(. Correct answer was '" . $eee . "'" . "\n");
+            echo("'" . $userResponse . "' is wrong answer ;(. Correct answer was '" . $even . "'" . "\n");
             line("Let's try again, %s", $name);
             break;
         }
@@ -37,6 +36,5 @@ function checkEven()
     if ($correctAnswerCount === 3) {
         line("Congratulations, %s", $name);
     }
-
 
 } 
