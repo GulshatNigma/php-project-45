@@ -6,6 +6,4 @@ require_once __DIR__ . "/../vendor/autoload.php";
 use function BrainEven\Even\getGreeting;
 use function BrainEven\Even\checkEven;
 
-getGreeting();
-
 checkEven();
