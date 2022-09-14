@@ -5,7 +5,6 @@ namespace BrainEven\Even;
 use function cli\line;
 use function cli\prompt;
 
-
 function checkEven()
 {
     line("Welcome to the Brain Games!");
