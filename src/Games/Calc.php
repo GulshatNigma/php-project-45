@@ -5,11 +5,15 @@ namespace BrainCalc\Calc;
 use function cli\line;
 use function cli\prompt;
 
+use function BrainGames\Engine\getGreeting;
+use function BrainGames\Engine\playerWinner;
+use function BrainGames\Engine\playerLosing;
+
 function calculator()
 {
-    line("Welcome to the Brain Games!");
-    $name = prompt("May I have your name?");
-    line("Hello, %s", $name);
+    
+
+    $name = getGreeting();
     line("What is the result of the expression?");
 
     $correctAnswerCount = 0;
@@ -32,7 +36,7 @@ function calculator()
                     $correctAnswerCount++;
                 } else {
                     line("'{$userResponse}' is wrong answer ;(. Correct answer was '{$result}'");
-                    line("Let's try again, %s", $name);
+                    playerLosing($name);
                     break;
                 }
             }
@@ -44,7 +48,7 @@ function calculator()
                     $correctAnswerCount++;
                 } else {
                     line("'{$userResponse}' is wrong answer ;(. Correct answer was '{$result}'");
-                    line("Let's try again, %s", $name);
+                    playerLosing($name);
                     break;
                 }
             }
@@ -56,13 +60,13 @@ function calculator()
                     $correctAnswerCount++;
                 } else {
                     line("'{$userResponse}' is wrong answer ;(. Correct answer was '{$result}'");
-                    line("Let's try again, %s", $name);
+                    playerLosing($name);
                     break;
                 }
             }
 
         if ($correctAnswerCount === 3) {
-            line("Congratulations, %s", $name);
+            playerWinner($name);
         }
     }
 
