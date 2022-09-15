@@ -22,7 +22,7 @@ function calculator()
         $arrrayIndex = array_rand($arrray);
         $mathematicalOperations = $arrray[$arrrayIndex];
 
-        line("Question: " . $randomNumber1 . " " . $mathematicalOperations . " " . $randomNumber2);
+        line("Question: {$randomNumber1} {$mathematicalOperations} {$randomNumber2}");
         $userResponse = prompt("You answer");
 
             if ($mathematicalOperations === "+") {
