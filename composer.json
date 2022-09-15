@@ -5,8 +5,9 @@
             "Hexlet\\Code\\": "src/"
         },
         "files": [  "src/Cli.php",
-                    "src/Even.php",
-                    "src/Calc.php"]
+                    "src/Games/Even.php",
+                    "src/Games/Calc.php",
+                    "src/Engine.php"]
     },
     "description": "php-project-45",
     "license": "MIT",
