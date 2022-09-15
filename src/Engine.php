@@ -13,12 +13,12 @@ function getGreeting() : string
     return $name;
 }
 
-function winner(string $name)
+function playerWinner(string $name)
 {
     line("Congratulations, %s", $name);
 }
 
-function loser(string $name)
+function playerLosing(string $name)
 {
     line("Let's try again, {$name}");
 }
