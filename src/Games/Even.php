@@ -6,18 +6,14 @@ use function cli\line;
 use function cli\prompt;
 
 use function BrainGames\Engine\getGreeting;
-use function BrainGames\Engine\winner;
-use function BrainGames\Engine\loser;
+use function BrainGames\Engine\playerWinner;
+use function BrainGames\Engine\playerLosing;
 
 function checkEven()
 {
     
     $name = getGreeting();
     
-    /*line("Welcome to the Brain Games!");
-    $name = prompt("May I have your name?");
-    line("Hello, %s", $name);
-    line('Answer "yes" if the number is even, otherwise answer "no".');*/
     $correctAnswerCount = 0;
 
     while($correctAnswerCount < 3) {
@@ -33,13 +29,13 @@ function checkEven()
             $correctAnswerCount++;
         } else {
             line("'{$userResponse}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
-            loser($name);
+            playerLosing($name);
             break;
         }
     } 
 
     if ($correctAnswerCount === 3) {
-        winner($name);
+        playerWinner($name);
     }
 
 } 
