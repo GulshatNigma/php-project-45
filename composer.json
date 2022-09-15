@@ -4,8 +4,9 @@
         "psr-4": {
             "Hexlet\\Code\\": "src/"
         },
-        "files": ["src/Cli.php",
-                  "src/Even.php"]
+        "files": [  "src/Cli.php",
+                    "src/Even.php",
+                    "src/Calc.php"]
     },
     "description": "php-project-45",
     "license": "MIT",
@@ -19,5 +20,6 @@
         "wp-cli/php-cli-tools": "^0.11.15"
     },
     "bin": ["bin/brain-games", 
-            "bin/brain-even"]
+            "bin/brain-even",
+            "bin/brain-calc"]
 }
