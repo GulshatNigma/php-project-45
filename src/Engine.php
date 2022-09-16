@@ -25,7 +25,6 @@ function correctAnswer(&$correctAnswerCount) : int
 {
         line("Correct!");
         return $correctAnswerCount++;
-        exit;
 }
 
 function playerWinner(string $name, $correctAnswerCount)
