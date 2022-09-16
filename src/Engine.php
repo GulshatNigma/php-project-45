@@ -21,6 +21,12 @@ function question(&$question) : string
     return $userResponse;
 }
 
+function correctAnswer(&$correctAnswerCount) : int
+{
+        line("Correct!");
+        return $correctAnswerCount++;
+}
+
 function playerWinner(string $name, $correctAnswerCount)
 {
     if ($correctAnswerCount === 3) {
