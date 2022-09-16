@@ -2,8 +2,6 @@
 
 namespace BrainCalc\Calc;
 
-use function cli\line;
-
 use function BrainGames\Engine\getGreeting;
 use function BrainGames\Engine\playerWinner;
 use function BrainGames\Engine\playerLosing;
@@ -24,35 +22,20 @@ function calculator()
         $randomNumber2 = rand(1, 10);
         $arrray = ["+", "-", "*"];
         $mathematicalOperations = $arrray[array_rand($arrray)];
+        
         $question = ("{$randomNumber1} {$mathematicalOperations} {$randomNumber2}");
-
         $userResponse = question($question);
-
-            if ($mathematicalOperations === "+") {
+        
+        if ($mathematicalOperations === "+") {
                 $correctAnswer = $randomNumber1 + $randomNumber2;
-                if ($correctAnswer == $userResponse) {
-                    correctAnswer($correctAnswerCount);
-                } else {
-                    playerLosing($name, $userResponse, $correctAnswer);
-                    break;
-                }
-            } elseif ($mathematicalOperations === "-") {
+                $correctAnswer == $userResponse ? correctAnswer($correctAnswerCount) : playerLosing($name, $userResponse, $correctAnswer); 
+        } elseif ($mathematicalOperations === "-") {
                 $correctAnswer = $randomNumber1 - $randomNumber2;
-                if ($correctAnswer == $userResponse) {
-                    correctAnswer($correctAnswerCount);
-                } else {
-                    playerLosing($name, $userResponse, $correctAnswer);
-                    break;
-                } 
-            } elseif ($mathematicalOperations === "*") {
-                    $correctAnswer = $randomNumber1 * $randomNumber2;
-                    if ($correctAnswer == $userResponse) {
-                        correctAnswer($correctAnswerCount);
-                    } else {
-                        playerLosing($name, $userResponse, $correctAnswer);
-                        break;
-                    }
-                }
-            playerWinner($name, $correctAnswerCount);
-    }
+                $correctAnswer == $userResponse ? correctAnswer($correctAnswerCount) : playerLosing($name, $userResponse, $correctAnswer);
+        } elseif ($mathematicalOperations === "*") {
+                $correctAnswer = $randomNumber1 * $randomNumber2;
+                $correctAnswer == $userResponse ? correctAnswer($correctAnswerCount) : playerLosing($name, $userResponse, $correctAnswer);
+        }
+        playerWinner($name, $correctAnswerCount);
+    } 
 }
