@@ -8,6 +8,7 @@ use function BrainGames\Engine\getGreeting;
 use function BrainGames\Engine\playerWinner;
 use function BrainGames\Engine\playerLosing;
 use function BrainGames\Engine\question;
+use function BrainGames\Engine\correctAnswer;
 
 function calculator()
 {
@@ -30,19 +31,17 @@ function calculator()
             if ($mathematicalOperations === "+") {
                 $correctAnswer = $randomNumber1 + $randomNumber2;
                 if ($correctAnswer == $userResponse) {
-                    line("Correct!");
-                    $correctAnswerCount++;
+                    correctAnswer($correctAnswerCount);
                 } else {
                     playerLosing($name, $userResponse, $correctAnswer);
-
+                    break;
                 }
             }
 
             if ($mathematicalOperations === "-") {
                 $correctAnswer = $randomNumber1 - $randomNumber2;
                 if ($correctAnswer == $userResponse) {
-                    line("Correct!");
-                    $correctAnswerCount++;
+                    correctAnswer($correctAnswerCount);
                 } else {
                     playerLosing($name, $userResponse, $correctAnswer);
                     break;
@@ -52,8 +51,7 @@ function calculator()
             if ($mathematicalOperations === "*") {
                 $correctAnswer = $randomNumber1 * $randomNumber2;
                 if ($correctAnswer == $userResponse) {
-                    line("Correct!");
-                    $correctAnswerCount++;
+                    correctAnswer($correctAnswerCount);
                 } else {
                     playerLosing($name, $userResponse, $correctAnswer);
                     break;
