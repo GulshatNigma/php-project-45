@@ -3,18 +3,17 @@
 namespace BrainCalc\Calc;
 
 use function cli\line;
-use function cli\prompt;
 
 use function BrainGames\Engine\getGreeting;
 use function BrainGames\Engine\playerWinner;
 use function BrainGames\Engine\playerLosing;
-use function BrainGames\Engine\quest;
+use function BrainGames\Engine\question;
 
 function calculator()
 {
     
-    $name = getGreeting();
-    line("What is the result of the expression?");
+    $gameConditions = "What is the result of the expression?";
+    $name = getGreeting($gameConditions);
 
     $correctAnswerCount = 0;
 
@@ -24,9 +23,9 @@ function calculator()
         $randomNumber2 = rand(1, 10);
         $arrray = ["+", "-", "*"];
         $mathematicalOperations = $arrray[array_rand($arrray)];
-        $quest = ("{$randomNumber1} {$mathematicalOperations} {$randomNumber2}");
+        $question = ("{$randomNumber1} {$mathematicalOperations} {$randomNumber2}");
 
-        $userResponse = quest($quest);
+        $userResponse = question($question);
 
             if ($mathematicalOperations === "+") {
                 $correctAnswer = $randomNumber1 + $randomNumber2;
@@ -34,7 +33,7 @@ function calculator()
                     line("Correct!");
                     $correctAnswerCount++;
                 } else {
-                    playerLosing($name, $userResponse);
+                    playerLosing($name, $userResponse, $correctAnswer);
 
                 }
             }
@@ -45,7 +44,7 @@ function calculator()
                     line("Correct!");
                     $correctAnswerCount++;
                 } else {
-                    playerLosing($name, $userResponse);
+                    playerLosing($name, $userResponse, $correctAnswer);
                     break;
                 }
             }
@@ -56,14 +55,10 @@ function calculator()
                     line("Correct!");
                     $correctAnswerCount++;
                 } else {
-                    playerLosing($name, $userResponse);
+                    playerLosing($name, $userResponse, $correctAnswer);
                     break;
                 }
             }
-
-        if ($correctAnswerCount === 3) {
-            playerWinner($name);
-        }
+            playerWinner($name, $correctAnswerCount);
     }
-
 }
