@@ -2,40 +2,32 @@
 
 namespace BrainEven\Even;
 
-use function cli\line;
-use function cli\prompt;
-
 use function BrainGames\Engine\getGreeting;
 use function BrainGames\Engine\playerWinner;
 use function BrainGames\Engine\playerLosing;
-use function BrainGames\Engine\quest;
+use function BrainGames\Engine\question;
+use function BrainGames\Engine\correctAnswer;
 
 function checkEven()
 {
     
-    $name = getGreeting();
+    $gameConditions = 'Answer "yes" if the number is even, otherwise answer "no".';
+    $name = getGreeting($gameConditions);
     
     $correctAnswerCount = 0;
 
     while($correctAnswerCount < 3) {
         
-        $randomNumber = rand(1, 100);
-        $quest = $randomNumber;
+        $question = rand(1, 100);;
+        $userResponse = question($question);
 
-        $userResponse = quest($quest);
-
-        $randomNumber % 2 === 0 ? $correctAnswer = "yes" : $correctAnswer= "no";
+        $question % 2 === 0 ? $correctAnswer = "yes" : $correctAnswer= "no";
         if ($correctAnswer=== $userResponse) {
-            line("Correct!");
-            $correctAnswerCount++;
+            correctAnswer($correctAnswerCount);
         } else {
-            playerLosing($name, $userResponse);
+            playerLosing($name, $userResponse, $correctAnswer);
             break;
         }
     } 
-
-    if ($correctAnswerCount === 3) {
-        playerWinner($name);
-    }
-
+        playerWinner($name, $correctAnswerCount);
 } 
