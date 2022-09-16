@@ -8,11 +8,11 @@ use function cli\prompt;
 use function BrainGames\Engine\getGreeting;
 use function BrainGames\Engine\playerWinner;
 use function BrainGames\Engine\playerLosing;
+use function BrainGames\Engine\quest;
 
 function calculator()
 {
     
-
     $name = getGreeting();
     line("What is the result of the expression?");
 
@@ -23,44 +23,40 @@ function calculator()
         $randomNumber1 = rand(1, 25);
         $randomNumber2 = rand(1, 10);
         $arrray = ["+", "-", "*"];
-        $arrrayIndex = array_rand($arrray);
-        $mathematicalOperations = $arrray[$arrrayIndex];
+        $mathematicalOperations = $arrray[array_rand($arrray)];
+        $quest = ("{$randomNumber1} {$mathematicalOperations} {$randomNumber2}");
 
-        line("Question: {$randomNumber1} {$mathematicalOperations} {$randomNumber2}");
-        $userResponse = prompt("You answer");
+        $userResponse = quest($quest);
 
             if ($mathematicalOperations === "+") {
-                $result = $randomNumber1 + $randomNumber2;
-                if ($result == $userResponse) {
+                $correctAnswer = $randomNumber1 + $randomNumber2;
+                if ($correctAnswer == $userResponse) {
                     line("Correct!");
                     $correctAnswerCount++;
                 } else {
-                    line("'{$userResponse}' is wrong answer ;(. Correct answer was '{$result}'");
-                    playerLosing($name);
-                    break;
+                    playerLosing($name, $userResponse);
+
                 }
             }
 
             if ($mathematicalOperations === "-") {
-                $result = $randomNumber1 - $randomNumber2;
-                if ($result == $userResponse) {
+                $correctAnswer = $randomNumber1 - $randomNumber2;
+                if ($correctAnswer == $userResponse) {
                     line("Correct!");
                     $correctAnswerCount++;
                 } else {
-                    line("'{$userResponse}' is wrong answer ;(. Correct answer was '{$result}'");
-                    playerLosing($name);
+                    playerLosing($name, $userResponse);
                     break;
                 }
             }
 
             if ($mathematicalOperations === "*") {
-                $result = $randomNumber1 * $randomNumber2;
-                if ($result == $userResponse) {
+                $correctAnswer = $randomNumber1 * $randomNumber2;
+                if ($correctAnswer == $userResponse) {
                     line("Correct!");
                     $correctAnswerCount++;
                 } else {
-                    line("'{$userResponse}' is wrong answer ;(. Correct answer was '{$result}'");
-                    playerLosing($name);
+                    playerLosing($name, $userResponse);
                     break;
                 }
             }
