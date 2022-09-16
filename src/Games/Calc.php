@@ -15,7 +15,6 @@ function calculator()
     $name = getGreeting($gameConditions);
 
     $correctAnswerCount = 0;
-
     while($correctAnswerCount < 3) {
         
         $randomNumber1 = rand(1, 25);
@@ -24,7 +23,7 @@ function calculator()
         $mathematicalOperations = $arrray[array_rand($arrray)];
         
         $question = ("{$randomNumber1} {$mathematicalOperations} {$randomNumber2}");
-        $userResponse = question($question);
+        $userResponse = question($question); 
         
         if ($mathematicalOperations === "+") {
                 $correctAnswer = $randomNumber1 + $randomNumber2;
