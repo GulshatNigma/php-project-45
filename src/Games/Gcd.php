@@ -25,11 +25,15 @@ function gcd()
         
         $maxNumber = ($randomNumber1 > $randomNumber2) ? $randomNumber1 : $randomNumber2;
         $minNumber = ($randomNumber1 < $randomNumber2) ? $randomNumber1 : $randomNumber2;
-        if ($randomNumber1 === $randomNumber2) {
-            $correctAnswer = $randomNumber1;
-        } elseif ($randomNumber1 > $randomNumber2) {
-
+        
+        $subtrsction = $maxNumber - $minNumber;
+        while ($subtrsction !== 0) {
+            $maxNumber = $subtrsction;
+            $subtrsction = $maxNumber - $minNumber;
         }
+
+        $correctAnswer = $maxNumber;
+
 
         $correctAnswer == $userResponse ? correctAnswer($correctAnswerCount) : playerLosing($name, $userResponse, $correctAnswer);
 
