@@ -22,7 +22,6 @@ function gcd()
         $question = "{$randomNumber1} {$randomNumber2}";
         $userResponse = question($question); 
         
-        
         $maxNumber = ($randomNumber1 > $randomNumber2) ? $randomNumber1 : $randomNumber2;
         $minNumber = ($randomNumber1 < $randomNumber2) ? $randomNumber1 : $randomNumber2;
         
@@ -33,11 +32,8 @@ function gcd()
         }
 
         $correctAnswer = $maxNumber;
+        $correctAnswer === $userResponse ? correctAnswer($correctAnswerCount) : playerLosing($name, $userResponse, $correctAnswer);
 
-
-        $correctAnswer == $userResponse ? correctAnswer($correctAnswerCount) : playerLosing($name, $userResponse, $correctAnswer);
-
-        
     }     
     playerWinner($name, $correctAnswerCount);
 }
