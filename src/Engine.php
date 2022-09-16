@@ -13,12 +13,20 @@ function getGreeting() : string
     return $name;
 }
 
+function quest(&$quest) : string
+{
+    line("Question: {$quest}");
+    $userResponse = prompt("You answer"); 
+    return $userResponse;
+}
+
 function playerWinner(string $name)
 {
     line("Congratulations, %s", $name);
 }
 
-function playerLosing(string $name)
+function playerLosing(string $name, string $userResponse)
 {
+    line("'{$userResponse}' is wrong answer ;(. Correct answer was '");  // {$correctAnswer}'");
     line("Let's try again, {$name}");
 }
