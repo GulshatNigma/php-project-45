@@ -38,4 +38,5 @@ function playerLosing(string $name, string $userResponse, $correctAnswer)
 {
     line("'{$userResponse}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
     line("Let's try again, {$name}");
+    exit;
 }
