@@ -36,27 +36,23 @@ function calculator()
                     playerLosing($name, $userResponse, $correctAnswer);
                     break;
                 }
-            }
-
-            if ($mathematicalOperations === "-") {
+            } elseif ($mathematicalOperations === "-") {
                 $correctAnswer = $randomNumber1 - $randomNumber2;
                 if ($correctAnswer == $userResponse) {
                     correctAnswer($correctAnswerCount);
                 } else {
                     playerLosing($name, $userResponse, $correctAnswer);
                     break;
+                } 
+            } elseif ($mathematicalOperations === "*") {
+                    $correctAnswer = $randomNumber1 * $randomNumber2;
+                    if ($correctAnswer == $userResponse) {
+                        correctAnswer($correctAnswerCount);
+                    } else {
+                        playerLosing($name, $userResponse, $correctAnswer);
+                        break;
+                    }
                 }
-            }
-
-            if ($mathematicalOperations === "*") {
-                $correctAnswer = $randomNumber1 * $randomNumber2;
-                if ($correctAnswer == $userResponse) {
-                    correctAnswer($correctAnswerCount);
-                } else {
-                    playerLosing($name, $userResponse, $correctAnswer);
-                    break;
-                }
-            }
             playerWinner($name, $correctAnswerCount);
     }
 }
