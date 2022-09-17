@@ -8,7 +8,8 @@
                     "src/Games/Even.php",
                     "src/Games/Calc.php",
                     "src/Games/Gcd.php",
-                    "src/Engine.php"]
+                    "src/Engine.php",
+                    "src/Progression.php"]
     },
     "description": "php-project-45",
     "license": "MIT",
@@ -24,5 +25,6 @@
     "bin": ["bin/brain-games", 
             "bin/brain-even",
             "bin/brain-calc",
-            "bin/brain-gcd"]
+            "bin/brain-gcd",
+            "bin/brain-progression"]
 }
