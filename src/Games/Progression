@@ -1,0 +1,26 @@
+<?php
+
+namespace BrainEven\Gcd;
+
+use function BrainGames\Engine\getGreeting;
+use function BrainGames\Engine\playerWinner;
+use function BrainGames\Engine\playerLosing;
+use function BrainGames\Engine\question;
+use function BrainGames\Engine\correctAnswer;
+
+function progression() {
+    
+    $gameConditions = "What number is missing in the progression?";
+    $name = getGreeting($gameConditions); 
+
+    $correctAnswerCount = 0;
+    
+    while ($correctAnswerCount < 3) {
+                
+        
+        
+
+        $correctAnswer == $userResponse ? correctAnswer($correctAnswerCount) : playerLosing($name, $userResponse, $correctAnswer);
+    }     
+    playerWinner($name, $correctAnswerCount);
+}
