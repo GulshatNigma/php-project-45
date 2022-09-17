@@ -9,7 +9,7 @@
                     "src/Games/Calc.php",
                     "src/Games/Gcd.php",
                     "src/Engine.php",
-                    "src/Progression.php"]
+                    "src/Games/Progression.php"]
     },
     "description": "php-project-45",
     "license": "MIT",
