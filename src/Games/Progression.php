@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainEven\Gcd;
+namespace BrainEven\Progression;
 
 use function BrainGames\Engine\getGreeting;
 use function BrainGames\Engine\playerWinner;
@@ -16,11 +16,18 @@ function progression() {
     $correctAnswerCount = 0;
     
     while ($correctAnswerCount < 3) {
-                
-        
-        
 
-        $correctAnswer == $userResponse ? correctAnswer($correctAnswerCount) : playerLosing($name, $userResponse, $correctAnswer);
+        $randomNumber = rand(1, 10);
+        $number = rand(1, 20);
+        $array = [];
+        for ($i = 0; $i <= 10; $i++) {
+            $array[] = $number;
+            $number += $randomNumber;
+        }
+         print_r($array);
+         $correctAnswerCount++;
+
+        //$correctAnswer == $userResponse ? correctAnswer($correctAnswerCount) : playerLosing($name, $userResponse, $correctAnswer);
     }     
     playerWinner($name, $correctAnswerCount);
 }
