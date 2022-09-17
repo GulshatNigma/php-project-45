@@ -20,6 +20,7 @@ function progression() {
         $randomNumber = rand(1, 10);
         $number = rand(1, 20);
         $array = [];
+
         for ($i = 0; $i <= 10; $i++) {
             $array[] = $number;
             $number += $randomNumber;
@@ -27,7 +28,14 @@ function progression() {
          print_r($array);
          $correctAnswerCount++;
 
-        //$correctAnswer == $userResponse ? correctAnswer($correctAnswerCount) : playerLosing($name, $userResponse, $correctAnswer);
+         
+        $randomIndex = array_rand($array);
+        $correctAnswer = $array[$randomIndex];
+        $array[$randomIndex] = "...";
+        $question = $array;
+        $userResponse = question($question);
+
+        $correctAnswer == $userResponse ? correctAnswer($correctAnswerCount) : playerLosing($name, $userResponse, $correctAnswer);
     }     
     playerWinner($name, $correctAnswerCount);
 }
