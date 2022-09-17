@@ -15,25 +15,22 @@ function gcd()
 
     $correctAnswerCount = 0;
     
-    while($correctAnswerCount < 3) {
+    while ($correctAnswerCount < 3) {
         
         $randomNumber1 = rand(1, 25);
         $randomNumber2 = rand(1, 10);
         $question = "{$randomNumber1} {$randomNumber2}";
         $userResponse = question($question); 
         
-        $maxNumber = ($randomNumber1 > $randomNumber2) ? $randomNumber1 : $randomNumber2;
-        $minNumber = ($randomNumber1 < $randomNumber2) ? $randomNumber1 : $randomNumber2;
-        
-        $correctAnswer = 0;
-        $subtrsction = $maxNumber % $minNumber;
-        while ($subtrsction !== 0) {
-            $correctAnswer = $subtrsction;
-            $subtrsction = $minNumber % $subtrsction;
+    while ($randomNumber1 !== $randomNumber2) {
+        if ($randomNumber1 > $randomNumber2) {
+            $randomNumber1 -= $randomNumber2;
+        } elseif ($randomNumber1 < $randomNumber2) {
+            $randomNumber2 -= $randomNumber1;
         }
-
+    }
+        $correctAnswer = $randomNumber1;
         $correctAnswer == $userResponse ? correctAnswer($correctAnswerCount) : playerLosing($name, $userResponse, $correctAnswer);
-
     }     
     playerWinner($name, $correctAnswerCount);
 }
