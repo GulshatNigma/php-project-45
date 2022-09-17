@@ -3,3 +3,5 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/5c096bf0d8e0cd4bcfd4/maintainability)](https://codeclimate.com/github/GulshatNigma/php-project-45/maintainability)
 [![asciicast](https://asciinema.org/a/vzzaJlAIT2rf1K5pP1JwQpm9A.svg)](https://asciinema.org/a/vzzaJlAIT2rf1K5pP1JwQpm9A)
 [![asciicast](https://asciinema.org/a/3jLX3nAg1IZChEi7CF6ZmxKed.svg)](https://asciinema.org/a/3jLX3nAg1IZChEi7CF6ZmxKed)
+Brain-gcd
+[![asciicast](https://asciinema.org/a/zKVBW1aTPQVsJ3DBtfuNlAPEw.svg)](https://asciinema.org/a/zKVBW1aTPQVsJ3DBtfuNlAPEw)
