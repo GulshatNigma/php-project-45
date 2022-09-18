@@ -7,3 +7,5 @@ Brain-gcd:
 [![asciicast](https://asciinema.org/a/zKVBW1aTPQVsJ3DBtfuNlAPEw.svg)](https://asciinema.org/a/zKVBW1aTPQVsJ3DBtfuNlAPEw)
 Brain-progression:
 [![asciicast](https://asciinema.org/a/NETBZhHHjqjLd9bm7UjbwMe68.svg)](https://asciinema.org/a/NETBZhHHjqjLd9bm7UjbwMe68)
+Brain-prime:
+[![asciicast](https://asciinema.org/a/un9DVQJsI1uwgOnmOirSqFeg2.svg)](https://asciinema.org/a/un9DVQJsI1uwgOnmOirSqFeg2)
