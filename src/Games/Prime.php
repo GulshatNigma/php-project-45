@@ -12,11 +12,24 @@ function primeRun()
 {
     $gameConditions = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $name = getGreeting($gameConditions); 
-
+    
     $correctAnswerCount = 0;
     
     while ($correctAnswerCount < 3) {
-        
+        $number = rand(1, 100);
+        $question = $number;
+        $userResponse = question($question); 
+
+        $correctAnswer = "no";
+
+        if ($number !== 1) {
+            $correctAnswer = "yes";
+            for ($i = 2; $i < $number; $i++) {
+                if ($number % $i === 0) {
+                    $correctAnswer = "no";
+                }
+            }
+        }
         
     
 
