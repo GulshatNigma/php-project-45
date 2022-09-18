@@ -11,7 +11,7 @@ use function BrainGames\Engine\correctAnswer;
 function gcd()
 {
     $gameConditions = "Find the greatest common divisor of given numbers.";
-    $name = getGreeting($gameConditions); 
+    $name = getGreeting($gameConditions);
 
     $correctAnswerCount = 0;
 
@@ -19,8 +19,8 @@ function gcd()
         $randomNumber1 = rand(1, 25);
         $randomNumber2 = rand(1, 10);
         $question = "{$randomNumber1} {$randomNumber2}";
-        $userResponse = question($question); 
-        
+        $userResponse = question($question);
+
         while ($randomNumber1 !== $randomNumber2) {
             if ($randomNumber1 > $randomNumber2) {
                 $randomNumber1 -= $randomNumber2;
@@ -30,6 +30,6 @@ function gcd()
         }
         $correctAnswer = $randomNumber1;
         $correctAnswer == $userResponse ? correctAnswer($correctAnswerCount) : playerLosing($name, $userResponse, $correctAnswer);
-    }     
+    }
     playerWinner($name, $correctAnswerCount);
 }

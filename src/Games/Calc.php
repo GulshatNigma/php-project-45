@@ -14,12 +14,12 @@ function calculator()
     $name = getGreeting($gameConditions);
 
     $correctAnswerCount = 0;
-    while ($correctAnswerCount < 3) { 
+    while ($correctAnswerCount < 3) {
         $randomNumber1 = rand(1, 25);
         $randomNumber2 = rand(1, 10);
         $arrray = ["+", "-", "*"];
         $mathematicalOperations = $arrray[array_rand($arrray)];
-        
+
         $question = ("{$randomNumber1} {$mathematicalOperations} {$randomNumber2}");
         $userResponse = question($question);
 
