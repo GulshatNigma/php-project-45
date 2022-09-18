@@ -30,7 +30,7 @@ function correctAnswer(&$correctAnswerCount): int
 function playerWinner(string $name, $correctAnswerCount)
 {
     if ($correctAnswerCount === 3) {
-        line("Congratulations, %s", $name);
+        line("Congratulations, {$name}!");
     }
 }
 
