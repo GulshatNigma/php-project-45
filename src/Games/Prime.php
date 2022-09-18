@@ -11,14 +11,14 @@ use function BrainGames\Engine\correctAnswer;
 function primeRun()
 {
     $gameConditions = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    $name = getGreeting($gameConditions); 
-    
+    $name = getGreeting($gameConditions);
+
     $correctAnswerCount = 0;
-    
+
     while ($correctAnswerCount < 3) {
         $number = rand(1, 100);
         $question = $number;
-        $userResponse = question($question); 
+        $userResponse = question($question);
 
         $correctAnswer = "no";
 
@@ -30,10 +30,7 @@ function primeRun()
                 }
             }
         }
-        
         $correctAnswer == $userResponse ? correctAnswer($correctAnswerCount) : playerLosing($name, $userResponse, $correctAnswer);
-    }    
+    }
     playerWinner($name, $correctAnswerCount);
 }
-
-
