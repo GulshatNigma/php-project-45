@@ -25,14 +25,14 @@ function progression() {
             $array[] = $number;
             $number += $randomNumber;
         }
-         print_r($array);
          $correctAnswerCount++;
 
          
         $randomIndex = array_rand($array);
         $correctAnswer = $array[$randomIndex];
         $array[$randomIndex] = "...";
-        $question = $array;
+        print_r($array);
+        $question = implode(" " ,$array);
         $userResponse = question($question);
 
         $correctAnswer == $userResponse ? correctAnswer($correctAnswerCount) : playerLosing($name, $userResponse, $correctAnswer);
