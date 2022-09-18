@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainEven\Gcd;
+namespace BrainGames\Gcd;
 
 use function BrainGames\Engine\getGreeting;
 use function BrainGames\Engine\playerWinner;
