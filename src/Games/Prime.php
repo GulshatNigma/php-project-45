@@ -31,8 +31,6 @@ function primeRun()
             }
         }
         
-    
-
         $correctAnswer == $userResponse ? correctAnswer($correctAnswerCount) : playerLosing($name, $userResponse, $correctAnswer);
     }    
     playerWinner($name, $correctAnswerCount);
