@@ -29,7 +29,11 @@ function gcd()
             }
         }
         $correctAnswer = $randomNumber1;
-        $correctAnswer == $userResponse ? correctAnswer($correctAnswerCount) : playerLosing($name, $userResponse, $correctAnswer);
+        if ($correctAnswer == $userResponse) {
+            correctAnswer($correctAnswerCount);
+        } else {
+            playerLosing($name, $userResponse, $correctAnswer);
+        }
     }
     playerWinner($name, $correctAnswerCount);
 }

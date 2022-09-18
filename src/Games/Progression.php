@@ -31,7 +31,11 @@ function progression()
         $question = implode(" ", $array);
         $userResponse = question($question);
 
-        $correctAnswer == $userResponse ? correctAnswer($correctAnswerCount) : playerLosing($name, $userResponse, $correctAnswer);
+        if ($correctAnswer == $userResponse) {
+            correctAnswer($correctAnswerCount);
+        } else {
+            playerLosing($name, $userResponse, $correctAnswer);
+        }
     }
     playerWinner($name, $correctAnswerCount);
 }
