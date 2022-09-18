@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainEven\Progression;
+namespace BrainGames\Progression;
 
 use function BrainGames\Engine\getGreeting;
 use function BrainGames\Engine\playerWinner;
@@ -25,13 +25,10 @@ function progression() {
             $array[] = $number;
             $number += $randomNumber;
         }
-         $correctAnswerCount++;
 
-         
         $randomIndex = array_rand($array);
         $correctAnswer = $array[$randomIndex];
         $array[$randomIndex] = "...";
-        print_r($array);
         $question = implode(" " ,$array);
         $userResponse = question($question);
 
