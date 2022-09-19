@@ -32,18 +32,18 @@ function calculator()
             }
         } elseif ($mathematicalOperations === "-") {
                 $correctAnswer = $randomNumber1 - $randomNumber2;
-        if ($correctAnswer == $userResponse) {
+            if ($correctAnswer == $userResponse) {
                         correctAnswer($correctAnswerCount);
-            } else {
+        } else {
                         playerLosing($name, $userResponse, $correctAnswer);
-                    }
+            }
         } elseif ($mathematicalOperations === "*") {
                 $correctAnswer = $randomNumber1 * $randomNumber2;
-                if ($correctAnswer == $userResponse) {
+            if ($correctAnswer == $userResponse) {
                         correctAnswer($correctAnswerCount);
-                    } else {
+                } else {
                         playerLosing($name, $userResponse, $correctAnswer);
-                    }
+            }
         }
         playerWinner($name, $correctAnswerCount);
     }
