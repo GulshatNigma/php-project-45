@@ -7,12 +7,17 @@ use function BrainGames\Engine\playerWinner;
 use function BrainGames\Engine\question;
 use function BrainGames\Engine\check;
 
-function calculator()
+function calculatorGreeting()
 {
-    $correctAnswer = "";
     $gameConditions = "What is the result of the expression?";
     getGreeting($gameConditions);
+}
+
+function calculatorRun()
+{
+    $correctAnswer = "";
     $correctAnswerCount = 0;
+    
     while ($correctAnswerCount < 3) {
         $randomNumber1 = rand(1, 25);
         $randomNumber2 = rand(1, 10);

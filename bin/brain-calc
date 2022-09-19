@@ -3,6 +3,9 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-use function BrainCalc\Calc\calculator;
+use function BrainCalc\Calc\calculatorGreeting;
+use function BrainCalc\Calc\calculatorRun;
 
-calculator();
+calculatorGreeting();
+
+calculatorRun();
