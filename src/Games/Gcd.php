@@ -28,7 +28,7 @@ function gcd()
                 $randomNumber2 -= $randomNumber1;
             }
         }
-        $correctAnswer = $randomNumber1;
+        $correctAnswer = (string) $randomNumber1;
         check($correctAnswer, $userResponse, $correctAnswerCount);
     }
     playerWinner($correctAnswerCount);

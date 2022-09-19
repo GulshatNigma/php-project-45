@@ -36,6 +36,7 @@ function calculator()
                 $correctAnswer = $randomNumber1 * $randomNumber2;
                 break;
         }
+        $correctAnswer = (string) $correctAnswer;
         check($correctAnswer, $userResponse, $correctAnswerCount);
     }
     playerWinner($correctAnswerCount);

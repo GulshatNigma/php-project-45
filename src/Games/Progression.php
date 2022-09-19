@@ -31,6 +31,7 @@ function progression()
         $question = implode(" ", $array);
         $userResponse = question($question);
 
+        $correctAnswer = (string) $correctAnswer;
         check($correctAnswer, $userResponse, $correctAnswerCount);
     }
     playerWinner($correctAnswerCount);
