@@ -21,12 +21,6 @@ function question(string &$question): string
     return $userResponse;
 }
 
-function correctAnswer(int &$correctAnswerCount): int
-{
-        line("Correct!");
-        return $correctAnswerCount++;
-}
-
 function playerWinner(int $correctAnswerCount)
 {
     global $name;
@@ -35,23 +29,15 @@ function playerWinner(int $correctAnswerCount)
     }
 }
 
-function playerLosing($userResponse, $correctAnswer)
-{
-    global $name;
-    line("'{$userResponse}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
-    line("Let's try again, {$name}!");
-    exit;
-}
-
 function check($correctAnswer, $userResponse, int &$correctAnswerCount)
 {
     if ($correctAnswer == $userResponse) {
         line("Correct!");
         return $correctAnswerCount++;
-} else {
-    global $name;
-    line("'{$userResponse}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
-    line("Let's try again, {$name}!");
-    exit;
-}
+    } else {
+        global $name;
+        line("'{$userResponse}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
+        line("Let's try again, {$name}!");
+        exit;
+    }
 }
