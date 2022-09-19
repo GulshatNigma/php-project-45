@@ -23,22 +23,19 @@ function calculator()
         $question = ("{$randomNumber1} {$mathematicalOperations} {$randomNumber2}");
         $userResponse = question($question);
 
-        if ($mathematicalOperations == "+") {
+        switch ($mathematicalOperations) {
+            case "+":
                 $correctAnswer = $randomNumber1 + $randomNumber2;
-            if ($correctAnswer == $userResponse) {
-                correctAnswer($correctAnswerCount);
-            } else {
-                playerLosing($name, $userResponse, $correctAnswer);
-            }
-        } elseif ($mathematicalOperations == "-") {
+                break;
+
+            case "-":
                 $correctAnswer = $randomNumber1 - $randomNumber2;
-            if ($correctAnswer == $userResponse) {
-                        correctAnswer($correctAnswerCount);
-            } else {
-                        playerLosing($name, $userResponse, $correctAnswer);
-            }
-        } elseif ($mathematicalOperations == "*") {
+                break;
+
+            case "*":
                 $correctAnswer = $randomNumber1 * $randomNumber2;
+                break;    
+        }        
             if ($correctAnswer == $userResponse) {
                         correctAnswer($correctAnswerCount);
             } else {
@@ -47,4 +44,3 @@ function calculator()
         }
         playerWinner($name, $correctAnswerCount);
     }
-}
