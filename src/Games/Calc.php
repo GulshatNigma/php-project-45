@@ -9,6 +9,7 @@ use function BrainGames\Engine\check;
 
 function calculator()
 {
+    $correctAnswer = "";
     $gameConditions = "What is the result of the expression?";
     getGreeting($gameConditions);
 

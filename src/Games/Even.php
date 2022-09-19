@@ -9,8 +9,9 @@ use function BrainGames\Engine\check;
 
 function checkEven()
 {
+    $correctAnswer = "";
     $gameConditions = 'Answer "yes" if the number is even, otherwise answer "no".';
-    $name = getGreeting($gameConditions);
+    getGreeting($gameConditions);
 
     $correctAnswerCount = 0;
 

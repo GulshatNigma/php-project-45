@@ -9,6 +9,7 @@ use function BrainGames\Engine\check;
 
 function progression()
 {
+    $correctAnswer = "";
     $gameConditions = "What number is missing in the progression?";
     getGreeting($gameConditions);
 
@@ -25,7 +26,7 @@ function progression()
         }
 
         $randomIndex = array_rand($array);
-        $correctAnswer = $array[$randomIndex];
+        $correctAnswer .= $array[$randomIndex];
         $array[$randomIndex] = "..";
         $question = implode(" ", $array);
         $userResponse = question($question);
