@@ -7,6 +7,7 @@ use function BrainGames\Engine\playerWinner;
 use function BrainGames\Engine\playerLosing;
 use function BrainGames\Engine\question;
 use function BrainGames\Engine\correctAnswer;
+use function BrainGames\Engine\check;
 
 function checkEven()
 {
@@ -20,12 +21,7 @@ function checkEven()
         $userResponse = question($question);
 
         $question % 2 === 0 ? $correctAnswer = "yes" : $correctAnswer = "no";
-        if ($correctAnswer === $userResponse) {
-            correctAnswer($correctAnswerCount);
-        } else {
-            playerLosing($userResponse, $correctAnswer);
-            break;
-        }
+        check($correctAnswer, $userResponse, $correctAnswerCount);
     }
         playerWinner($correctAnswerCount);
 }
