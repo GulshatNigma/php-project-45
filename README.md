@@ -15,16 +15,18 @@
 
 make install:
 [![asciicast](https://asciinema.org/a/X603fFFXW0E4PR8Zwj0FlJW6b.svg)](https://asciinema.org/a/X603fFFXW0E4PR8Zwj0FlJW6b)
+
 make brain-even:
-__
 [![asciicast](https://asciinema.org/a/zGTIrpBOm45ajggj7zWLe9d98.svg)](https://asciinema.org/a/zGTIrpBOm45ajggj7zWLe9d98)
-make brain-calc](https://asciinema.org/a/3jLX3nAg1IZChEi7CF6ZmxKed.svg)](https://asciinema.org/a/3jLX3nAg1IZChEi7CF6ZmxKed)
-__
+
+make brain-calc:
+[![asciicast](https://asciinema.org/a/3jLX3nAg1IZChEi7CF6ZmxKed.svg)](https://asciinema.org/a/3jLX3nAg1IZChEi7CF6ZmxKed)
+
 make brain-gcd:
 [![asciicast](https://asciinema.org/a/zKVBW1aTPQVsJ3DBtfuNlAPEw.svg)](https://asciinema.org/a/zKVBW1aTPQVsJ3DBtfuNlAPEw)
-__
+
 make brain-progression:
 [![asciicast](https://asciinema.org/a/NETBZhHHjqjLd9bm7UjbwMe68.svg)](https://asciinema.org/a/NETBZhHHjqjLd9bm7UjbwMe68)
-__
+
 make brain-prime:
 [![asciicast](https://asciinema.org/a/un9DVQJsI1uwgOnmOirSqFeg2.svg)](https://asciinema.org/a/un9DVQJsI1uwgOnmOirSqFeg2)
