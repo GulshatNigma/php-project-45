@@ -17,7 +17,7 @@ function calculatorRun()
 {
     $correctAnswer = "";
     $correctAnswerCount = 0;
-    
+
     while ($correctAnswerCount < 3) {
         $randomNumber1 = rand(1, 25);
         $randomNumber2 = rand(1, 10);
