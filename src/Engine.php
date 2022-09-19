@@ -21,7 +21,7 @@ function question(string &$question): string
     return $userResponse;
 }
 
-function correctAnswer(string &$correctAnswerCount): int
+function correctAnswer(int &$correctAnswerCount): int
 {
         line("Correct!");
         return $correctAnswerCount++;
