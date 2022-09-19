@@ -21,20 +21,20 @@ function question(string &$question): string
     return $userResponse;
 }
 
-function correctAnswer(int &$correctAnswerCount): int
+function correctAnswer(string &$correctAnswerCount): int
 {
         line("Correct!");
         return $correctAnswerCount++;
 }
 
-function playerWinner(string $name, int $correctAnswerCount)
+function playerWinner(string $name, string $correctAnswerCount)
 {
     if ($correctAnswerCount === 3) {
         line("Congratulations, {$name}!");
     }
 }
 
-function playerLosing(string $name, string $userResponse, int $correctAnswer)
+function playerLosing(string $name, string $userResponse, string $correctAnswer)
 {
     line("'{$userResponse}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
     line("Let's try again, {$name}!");
