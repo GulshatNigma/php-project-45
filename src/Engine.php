@@ -29,7 +29,7 @@ function playerWinner(int $correctAnswerCount)
     }
 }
 
-function check($correctAnswer, $userResponse, int &$correctAnswerCount)
+function check(mixed $correctAnswer, mixed $userResponse, int &$correctAnswerCount)
 {
     if ($correctAnswer == $userResponse) {
         line("Correct!");
