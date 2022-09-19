@@ -12,7 +12,6 @@ function calculator()
     $correctAnswer = "";
     $gameConditions = "What is the result of the expression?";
     getGreeting($gameConditions);
-
     $correctAnswerCount = 0;
     while ($correctAnswerCount < 3) {
         $randomNumber1 = rand(1, 25);
