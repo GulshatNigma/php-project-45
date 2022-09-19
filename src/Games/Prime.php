@@ -11,7 +11,7 @@ use function BrainGames\Engine\correctAnswer;
 function primeRun()
 {
     $gameConditions = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    $name = getGreeting($gameConditions);
+    getGreeting($gameConditions);
 
     $correctAnswerCount = 0;
 

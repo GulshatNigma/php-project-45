@@ -35,7 +35,7 @@ function playerWinner(int $correctAnswerCount)
     }
 }
 
-function playerLosing(string $userResponse, string $correctAnswer)
+function playerLosing(string $userResponse, $correctAnswer)
 {
     global $name;
     line("'{$userResponse}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");

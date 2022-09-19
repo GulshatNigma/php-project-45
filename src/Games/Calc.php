@@ -11,7 +11,7 @@ use function BrainGames\Engine\correctAnswer;
 function calculator()
 {
     $gameConditions = "What is the result of the expression?";
-    $name = getGreeting($gameConditions);
+    getGreeting($gameConditions);
 
     $correctAnswerCount = 0;
     while ($correctAnswerCount < 3) {

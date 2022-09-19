@@ -11,7 +11,7 @@ use function BrainGames\Engine\correctAnswer;
 function progression()
 {
     $gameConditions = "What number is missing in the progression?";
-    $name = getGreeting($gameConditions);
+    getGreeting($gameConditions);
 
     $correctAnswerCount = 0;
 
