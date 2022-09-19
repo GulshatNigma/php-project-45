@@ -34,13 +34,13 @@ function calculator()
 
             case "*":
                 $correctAnswer = $randomNumber1 * $randomNumber2;
-                break;   
+                break;
         }
-            if ($correctAnswer == $userResponse) {
+        if ($correctAnswer == $userResponse) {
                         correctAnswer($correctAnswerCount);
-                } else {
+            } else {
                         playerLosing($userResponse, $correctAnswer);
-                }
             }
-        playerWinner($correctAnswerCount);
         }
+        playerWinner($correctAnswerCount);
+    }
