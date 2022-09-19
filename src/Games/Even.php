@@ -23,9 +23,9 @@ function checkEven()
         if ($correctAnswer === $userResponse) {
             correctAnswer($correctAnswerCount);
         } else {
-            playerLosing($name, $userResponse, $correctAnswer);
+            playerLosing($userResponse, $correctAnswer);
             break;
         }
     }
-        playerWinner($name, $correctAnswerCount);
+        playerWinner($correctAnswerCount);
 }

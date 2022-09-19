@@ -33,8 +33,8 @@ function primeRun()
         if ($correctAnswer == $userResponse) {
             correctAnswer($correctAnswerCount);
         } else {
-            playerLosing($name, $userResponse, $correctAnswer);
+            playerLosing($userResponse, $correctAnswer);
         }
     }
-    playerWinner($name, $correctAnswerCount);
+    playerWinner($correctAnswerCount);
 }
