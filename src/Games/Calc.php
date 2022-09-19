@@ -23,21 +23,21 @@ function calculator()
         $question = ("{$randomNumber1} {$mathematicalOperations} {$randomNumber2}");
         $userResponse = question($question);
 
-        if ($mathematicalOperations === "+") {
+        if ($mathematicalOperations == "+") {
                 $correctAnswer = $randomNumber1 + $randomNumber2;
             if ($correctAnswer == $userResponse) {
                 correctAnswer($correctAnswerCount);
             } else {
                 playerLosing($name, $userResponse, $correctAnswer);
             }
-        } elseif ($mathematicalOperations === "-") {
+        } elseif ($mathematicalOperations == "-") {
                 $correctAnswer = $randomNumber1 - $randomNumber2;
             if ($correctAnswer == $userResponse) {
                         correctAnswer($correctAnswerCount);
             } else {
                         playerLosing($name, $userResponse, $correctAnswer);
             }
-        } elseif ($mathematicalOperations === "*") {
+        } elseif ($mathematicalOperations == "*") {
                 $correctAnswer = $randomNumber1 * $randomNumber2;
             if ($correctAnswer == $userResponse) {
                         correctAnswer($correctAnswerCount);
