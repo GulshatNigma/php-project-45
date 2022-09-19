@@ -26,7 +26,7 @@ function progression()
         }
 
         $randomIndex = array_rand($array);
-        $correctAnswer .= $array[$randomIndex];
+        $correctAnswer = $array[$randomIndex];
         $array[$randomIndex] = "..";
         $question = implode(" ", $array);
         $userResponse = question($question);
