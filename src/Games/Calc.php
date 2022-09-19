@@ -38,6 +38,6 @@ function calculator()
                 break;
         }
         check($correctAnswer, $userResponse, $correctAnswerCount);
-        }
-        playerWinner($correctAnswerCount);
     }
+    playerWinner($correctAnswerCount);
+}
