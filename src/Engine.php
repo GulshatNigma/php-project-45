@@ -21,14 +21,6 @@ function getUserAnswer(string &$question): string
     return $userAnser;
 }
 
-function isPlayerWinner(int $correctAnswerCount)
-{
-    global $name;
-    if ($correctAnswerCount === 3) {
-        line("Congratulations, {$name}!");
-    }
-}
-
 function checkUserAnswer(string $correctAnswer, string $userAnser, int &$correctAnswerCount)
 {
     if ($correctAnswer == $userAnser) {
@@ -39,5 +31,13 @@ function checkUserAnswer(string $correctAnswer, string $userAnser, int &$correct
         line("'{$userAnser}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
         line("Let's try again, {$name}!");
         exit;
+    }
+}
+
+function isPlayerWinner(int $correctAnswerCount)
+{
+    global $name;
+    if ($correctAnswerCount === 3) {
+        line("Congratulations, {$name}!");
     }
 }
