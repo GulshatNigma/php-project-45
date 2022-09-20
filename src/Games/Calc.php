@@ -9,8 +9,8 @@ use function BrainGames\Engine\checkUserAnswer;
 
 function calculatorGreeting()
 {
-    $gameConditions = "What is the result of the expression?";
-    getGreeting($gameConditions);
+    $gameRule = "What is the result of the expression?";
+    getGreeting($gameRule);
 }
 
 function calculatorRun()

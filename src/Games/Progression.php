@@ -10,8 +10,8 @@ use function BrainGames\Engine\checkUserAnswer;
 function progression()
 {
     $correctAnswer = "";
-    $gameConditions = "What number is missing in the progression?";
-    getGreeting($gameConditions);
+    $gameRule = "What number is missing in the progression?";
+    getGreeting($gameRule);
 
     $correctAnswerCount = 0;
 

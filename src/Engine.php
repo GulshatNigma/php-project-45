@@ -5,13 +5,13 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function getGreeting(string $gameConditions)
+function getGreeting(string $gameRule)
 {
     line("Welcome to the Brain Games!");
     global $name;
     $name = prompt("May I have your name?");
     line("Hello, %s", $name);
-    line("{$gameConditions}");
+    line("{$gameRule}");
 }
 
 function getUserAnswer(string &$question): string

@@ -9,8 +9,8 @@ use function BrainGames\Engine\checkUserAnswer;
 
 function gcdGreeting()
 {
-    $gameConditions = "Find the greatest common divisor of given numbers.";
-    getGreeting($gameConditions);
+    $gameRule = "Find the greatest common divisor of given numbers.";
+    getGreeting($gameRule);
 }
 
 function gcdRun()

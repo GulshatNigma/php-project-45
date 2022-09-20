@@ -10,8 +10,8 @@ use function BrainGames\Engine\checkUserAnswer;
 function checkEven()
 {
     $correctAnswer = "";
-    $gameConditions = 'Answer "yes" if the number is even, otherwise answer "no".';
-    getGreeting($gameConditions);
+    $gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
+    getGreeting($gameRule);
 
     $correctAnswerCount = 0;
 
