@@ -12,21 +12,26 @@
 + Brain-gcd - определение наибольшего общего делителя.
 + Brain-prime - определение простого числа.
 
+### Инструкция по установке и запуску
 
+$ git clone git@github.com:GulshatNigma/php-project-45.git
+$ make install
+
+### Команды
 make install:
 [![asciicast](https://asciinema.org/a/X603fFFXW0E4PR8Zwj0FlJW6b.svg)](https://asciinema.org/a/X603fFFXW0E4PR8Zwj0FlJW6b)
 
-make brain-even:
+make brain-even - запуск игры "Brain-even":
 [![asciicast](https://asciinema.org/a/zGTIrpBOm45ajggj7zWLe9d98.svg)](https://asciinema.org/a/zGTIrpBOm45ajggj7zWLe9d98)
 
-make brain-calc:
+make brain-calc - запуск игры "Brain-calc":
 [![asciicast](https://asciinema.org/a/3jLX3nAg1IZChEi7CF6ZmxKed.svg)](https://asciinema.org/a/3jLX3nAg1IZChEi7CF6ZmxKed)
 
-make brain-gcd:
+make brain-gcd - запуск игры "Brain-gcd":
 [![asciicast](https://asciinema.org/a/zKVBW1aTPQVsJ3DBtfuNlAPEw.svg)](https://asciinema.org/a/zKVBW1aTPQVsJ3DBtfuNlAPEw)
 
-make brain-progression:
+make brain-progression - запуск игры "Brain-progression":
 [![asciicast](https://asciinema.org/a/NETBZhHHjqjLd9bm7UjbwMe68.svg)](https://asciinema.org/a/NETBZhHHjqjLd9bm7UjbwMe68)
 
-make brain-prime:
+make brain-prime - запуск игры "Brain-prime":
 [![asciicast](https://asciinema.org/a/un9DVQJsI1uwgOnmOirSqFeg2.svg)](https://asciinema.org/a/un9DVQJsI1uwgOnmOirSqFeg2)
