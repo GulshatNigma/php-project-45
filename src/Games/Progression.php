@@ -5,7 +5,7 @@ namespace BrainGames\Progression;
 use function BrainGames\Engine\getGreeting;
 use function BrainGames\Engine\isPlayerWinner;
 use function BrainGames\Engine\getUserAnswer;
-use function BrainGames\Engine\check;
+use function BrainGames\Engine\checkUserAnswer;
 
 function progression()
 {
@@ -32,7 +32,7 @@ function progression()
         $userAnser = getUserAnswer($question);
 
         $correctAnswer = (string) $correctAnswer;
-        check($correctAnswer, $userAnser, $correctAnswerCount);
+        checkUserAnswer($correctAnswer, $userAnser, $correctAnswerCount);
     }
     isPlayerWinner($correctAnswerCount);
 }
