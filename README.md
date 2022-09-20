@@ -19,20 +19,20 @@ $ cd php-project-45
 $ make install
 ```
 ### Команды
-make install:
+<b>make install:</b>
 [![asciicast](https://asciinema.org/a/X603fFFXW0E4PR8Zwj0FlJW6b.svg)](https://asciinema.org/a/X603fFFXW0E4PR8Zwj0FlJW6b)
 
-make brain-even - запуск игры "Brain-even":
+<b>make brain-even - запуск игры "Brain-even":</b>
 [![asciicast](https://asciinema.org/a/zGTIrpBOm45ajggj7zWLe9d98.svg)](https://asciinema.org/a/zGTIrpBOm45ajggj7zWLe9d98)
 
-make brain-calc - запуск игры "Brain-calc":
+<b>make brain-calc - запуск игры "Brain-calc":</b>
 [![asciicast](https://asciinema.org/a/3jLX3nAg1IZChEi7CF6ZmxKed.svg)](https://asciinema.org/a/3jLX3nAg1IZChEi7CF6ZmxKed)
 
-make brain-gcd - запуск игры "Brain-gcd":
+<b>make brain-gcd - запуск игры "Brain-gcd":</b>
 [![asciicast](https://asciinema.org/a/zKVBW1aTPQVsJ3DBtfuNlAPEw.svg)](https://asciinema.org/a/zKVBW1aTPQVsJ3DBtfuNlAPEw)
 
-make brain-progression - запуск игры "Brain-progression":
+<b>make brain-progression - запуск игры "Brain-progression":</b>
 [![asciicast](https://asciinema.org/a/NETBZhHHjqjLd9bm7UjbwMe68.svg)](https://asciinema.org/a/NETBZhHHjqjLd9bm7UjbwMe68)
 
-make brain-prime - запуск игры "Brain-prime":
+<b>make brain-prime - запуск игры "Brain-prime":</b>
 [![asciicast](https://asciinema.org/a/un9DVQJsI1uwgOnmOirSqFeg2.svg)](https://asciinema.org/a/un9DVQJsI1uwgOnmOirSqFeg2)
