@@ -25,10 +25,10 @@ function primeRun()
 
         if ($number !== 1) {
             $correctAnswer = "yes";
-            for ($i = 2; $i < $number; $i++) {
-                if ($number % $i === 0) {
-                    $correctAnswer = "no";
-                }
+        }
+        for ($i = 2; $i < $number; $i++) {
+            if ($number % $i === 0) {
+                $correctAnswer = "no";
             }
         }
         checkUserAnswer($correctAnswer, $userAnser, $correctAnswerCount);
