@@ -14,11 +14,11 @@ function getGreeting(string $gameConditions)
     line("{$gameConditions}");
 }
 
-function question(string &$question): string
+function getUserAnswer(string &$question): string
 {
     line("Question: {$question}");
-    $userResponse = prompt("You answer");
-    return $userResponse;
+    $userAnser = prompt("You answer");
+    return $userAnser;
 }
 
 function playerWinner(int $correctAnswerCount)
@@ -29,14 +29,14 @@ function playerWinner(int $correctAnswerCount)
     }
 }
 
-function check(string $correctAnswer, string $userResponse, int &$correctAnswerCount)
+function check(string $correctAnswer, string $userAnser, int &$correctAnswerCount)
 {
-    if ($correctAnswer == $userResponse) {
+    if ($correctAnswer == $userAnser) {
         line("Correct!");
         return $correctAnswerCount++;
     } else {
         global $name;
-        line("'{$userResponse}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
+        line("'{$userAnser}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
         line("Let's try again, {$name}!");
         exit;
     }

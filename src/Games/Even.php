@@ -4,7 +4,7 @@ namespace BrainGames\Even;
 
 use function BrainGames\Engine\getGreeting;
 use function BrainGames\Engine\playerWinner;
-use function BrainGames\Engine\question;
+use function BrainGames\Engine\getUserAnswer;
 use function BrainGames\Engine\check;
 
 function checkEven()
@@ -17,10 +17,10 @@ function checkEven()
 
     while ($correctAnswerCount < 3) {
         $question = rand(1, 100);
-        $userResponse = question($question);
+        $userAnser = getUserAnswer($question);
 
         $question % 2 === 0 ? $correctAnswer = "yes" : $correctAnswer = "no";
-        check($correctAnswer, $userResponse, $correctAnswerCount);
+        check($correctAnswer, $userAnser, $correctAnswerCount);
     }
         playerWinner($correctAnswerCount);
 }

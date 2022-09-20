@@ -4,7 +4,7 @@ namespace BrainGames\Progression;
 
 use function BrainGames\Engine\getGreeting;
 use function BrainGames\Engine\playerWinner;
-use function BrainGames\Engine\question;
+use function BrainGames\Engine\getUserAnswer;
 use function BrainGames\Engine\check;
 
 function progression()
@@ -29,10 +29,10 @@ function progression()
         $correctAnswer = $array[$randomIndex];
         $array[$randomIndex] = "..";
         $question = implode(" ", $array);
-        $userResponse = question($question);
+        $userAnser = getUserAnswer($question);
 
         $correctAnswer = (string) $correctAnswer;
-        check($correctAnswer, $userResponse, $correctAnswerCount);
+        check($correctAnswer, $userAnser, $correctAnswerCount);
     }
     playerWinner($correctAnswerCount);
 }

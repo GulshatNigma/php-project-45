@@ -4,7 +4,7 @@ namespace BrainGames\Calc;
 
 use function BrainGames\Engine\getGreeting;
 use function BrainGames\Engine\playerWinner;
-use function BrainGames\Engine\question;
+use function BrainGames\Engine\getUserAnswer;
 use function BrainGames\Engine\check;
 
 function calculatorGreeting()
@@ -21,11 +21,10 @@ function calculatorRun()
     while ($correctAnswerCount < 3) {
         $randomNumber1 = rand(1, 25);
         $randomNumber2 = rand(1, 10);
-        $arrray = ["+", "-", "*"];
-        $mathematicalOperations = $arrray[array_rand($arrray)];
+        $mathematicalOperations = array_rand(["+", "-", "*"]);
 
         $question = ("{$randomNumber1} {$mathematicalOperations} {$randomNumber2}");
-        $userResponse = question($question);
+        $userAnser = getUserAnswer($question);
 
         switch ($mathematicalOperations) {
             case "+":
@@ -41,7 +40,7 @@ function calculatorRun()
                 break;
         }
         $correctAnswer = (string) $correctAnswer;
-        check($correctAnswer, $userResponse, $correctAnswerCount);
+        check($correctAnswer, $userAnser, $correctAnswerCount);
     }
     playerWinner($correctAnswerCount);
 }

@@ -4,7 +4,7 @@ namespace BrainGames\Gcd;
 
 use function BrainGames\Engine\getGreeting;
 use function BrainGames\Engine\playerWinner;
-use function BrainGames\Engine\question;
+use function BrainGames\Engine\getUserAnswer;
 use function BrainGames\Engine\check;
 
 function gcdGreeting()
@@ -21,7 +21,7 @@ function gcdRun()
         $randomNumber1 = rand(1, 25);
         $randomNumber2 = rand(1, 10);
         $question = "{$randomNumber1} {$randomNumber2}";
-        $userResponse = question($question);
+        $userAnser = getUserAnswer($question);
 
         while ($randomNumber1 !== $randomNumber2) {
             if ($randomNumber1 > $randomNumber2) {
@@ -31,7 +31,7 @@ function gcdRun()
             }
         }
         $correctAnswer = (string) $randomNumber1;
-        check($correctAnswer, $userResponse, $correctAnswerCount);
+        check($correctAnswer, $userAnser, $correctAnswerCount);
     }
     playerWinner($correctAnswerCount);
 }

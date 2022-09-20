@@ -4,7 +4,7 @@ namespace BrainGames\Prime;
 
 use function BrainGames\Engine\getGreeting;
 use function BrainGames\Engine\playerWinner;
-use function BrainGames\Engine\question;
+use function BrainGames\Engine\getUserAnswer;
 use function BrainGames\Engine\check;
 
 function getGreeetingPrime()
@@ -21,7 +21,7 @@ function primeRun()
     while ($correctAnswerCount < 3) {
         $number = rand(1, 100);
         $question = $number;
-        $userResponse = question($question);
+        $userAnser = getUserAnswer($question);
 
         if ($number !== 1) {
             $correctAnswer = "yes";
@@ -31,7 +31,7 @@ function primeRun()
                 }
             }
         }
-        check($correctAnswer, $userResponse, $correctAnswerCount);
+        check($correctAnswer, $userAnser, $correctAnswerCount);
     }
     playerWinner($correctAnswerCount);
 }
