@@ -15,7 +15,6 @@ function gcdGreeting()
 
 function gcdRun()
 {
-    $correctAnswer = "";
     $correctAnswerCount = 0;
 
     while ($correctAnswerCount < 3) {
