@@ -22,17 +22,17 @@ $ make install
 <b>make install:</b>
 [![asciicast](https://asciinema.org/a/X603fFFXW0E4PR8Zwj0FlJW6b.svg)](https://asciinema.org/a/X603fFFXW0E4PR8Zwj0FlJW6b)
 
-<b>make brain-even - запуск игры "Brain-even":</b>
+<b>make brain-even</b> - запуск игры "Brain-even":
 [![asciicast](https://asciinema.org/a/zGTIrpBOm45ajggj7zWLe9d98.svg)](https://asciinema.org/a/zGTIrpBOm45ajggj7zWLe9d98)
 
-<b>make brain-calc - запуск игры "Brain-calc":</b>
+<b>make brain-calc</b> - запуск игры "Brain-calc":
 [![asciicast](https://asciinema.org/a/3jLX3nAg1IZChEi7CF6ZmxKed.svg)](https://asciinema.org/a/3jLX3nAg1IZChEi7CF6ZmxKed)
 
-<b>make brain-gcd - запуск игры "Brain-gcd":</b>
+<b>make brain-gcd</b> - запуск игры "Brain-gcd":
 [![asciicast](https://asciinema.org/a/zKVBW1aTPQVsJ3DBtfuNlAPEw.svg)](https://asciinema.org/a/zKVBW1aTPQVsJ3DBtfuNlAPEw)
 
-<b>make brain-progression - запуск игры "Brain-progression":</b>
+<b>make brain-progression</b> - запуск игры "Brain-progression":
 [![asciicast](https://asciinema.org/a/NETBZhHHjqjLd9bm7UjbwMe68.svg)](https://asciinema.org/a/NETBZhHHjqjLd9bm7UjbwMe68)
 
-<b>make brain-prime - запуск игры "Brain-prime":</b>
+<b>make brain-prime</b> - запуск игры "Brain-prime":
 [![asciicast](https://asciinema.org/a/un9DVQJsI1uwgOnmOirSqFeg2.svg)](https://asciinema.org/a/un9DVQJsI1uwgOnmOirSqFeg2)
