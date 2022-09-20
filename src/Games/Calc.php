@@ -21,7 +21,8 @@ function calculatorRun()
     while ($correctAnswerCount < 3) {
         $randomNumber1 = rand(1, 25);
         $randomNumber2 = rand(1, 10);
-        $mathematicalOperations = array_rand(["+", "-", "*"]);
+        $arrray = ["+", "-", "*"];
+        $mathematicalOperations = $arrray[array_rand($arrray)];
 
         $question = ("{$randomNumber1} {$mathematicalOperations} {$randomNumber2}");
         $userAnser = getUserAnswer($question);
