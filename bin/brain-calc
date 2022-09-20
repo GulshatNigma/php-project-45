@@ -3,8 +3,8 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-use function BrainCalc\Calc\calculatorGreeting;
-use function BrainCalc\Calc\calculatorRun;
+use function BrainGames\Calc\calculatorGreeting;
+use function BrainGames\Calc\calculatorRun;
 
 calculatorGreeting();
 

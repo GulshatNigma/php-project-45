@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainEven\Even;
+namespace BrainGames\Even;
 
 use function BrainGames\Engine\getGreeting;
 use function BrainGames\Engine\playerWinner;

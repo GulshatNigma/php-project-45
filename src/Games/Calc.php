@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainCalc\Calc;
+namespace BrainGames\Calc;
 
 use function BrainGames\Engine\getGreeting;
 use function BrainGames\Engine\playerWinner;
