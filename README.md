@@ -13,10 +13,10 @@
 + Brain-prime - определение простого числа.
 
 ### Инструкция по установке и запуску
-
+```
 $ git clone git@github.com:GulshatNigma/php-project-45.git
 $ make install
-
+```
 ### Команды
 make install:
 [![asciicast](https://asciinema.org/a/X603fFFXW0E4PR8Zwj0FlJW6b.svg)](https://asciinema.org/a/X603fFFXW0E4PR8Zwj0FlJW6b)
