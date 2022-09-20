@@ -7,20 +7,21 @@ use function BrainGames\Engine\playerWinner;
 use function BrainGames\Engine\question;
 use function BrainGames\Engine\check;
 
-function primeRun()
+function getGreeetingPrime()
 {
-    $correctAnswer = "";
     $gameConditions = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     getGreeting($gameConditions);
+}
 
+function primeRun()
+{
+    $correctAnswer = "no";
     $correctAnswerCount = 0;
 
     while ($correctAnswerCount < 3) {
         $number = rand(1, 100);
         $question = $number;
         $userResponse = question($question);
-
-        $correctAnswer = "no";
 
         if ($number !== 1) {
             $correctAnswer = "yes";
