@@ -7,7 +7,7 @@ use function BrainGames\Engine\isPlayerWinner;
 use function BrainGames\Engine\getUserAnswer;
 use function BrainGames\Engine\checkUserAnswer;
 
-function calculatorGreeting()
+function getCalculatorGreeting()
 {
     $gameRule = "What is the result of the expression?";
     getGreeting($gameRule);

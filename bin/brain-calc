@@ -3,9 +3,9 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-use function BrainGames\Calc\calculatorGreeting;
+use function BrainGames\Calc\getCalculatorGreeting;
 use function BrainGames\Calc\calculatorRun;
 
-calculatorGreeting();
+getCalculatorGreeting();
 
 calculatorRun();
