@@ -21,7 +21,7 @@ function getUserAnswer(string &$question): string
     return $userAnser;
 }
 
-function playerWinner(int $correctAnswerCount)
+function isPlayerWinner(int $correctAnswerCount)
 {
     global $name;
     if ($correctAnswerCount === 3) {

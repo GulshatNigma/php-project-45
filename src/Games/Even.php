@@ -3,7 +3,7 @@
 namespace BrainGames\Even;
 
 use function BrainGames\Engine\getGreeting;
-use function BrainGames\Engine\playerWinner;
+use function BrainGames\Engine\isPlayerWinner;
 use function BrainGames\Engine\getUserAnswer;
 use function BrainGames\Engine\check;
 
@@ -22,5 +22,5 @@ function checkEven()
         $question % 2 === 0 ? $correctAnswer = "yes" : $correctAnswer = "no";
         check($correctAnswer, $userAnser, $correctAnswerCount);
     }
-        playerWinner($correctAnswerCount);
+    isPlayerWinner($correctAnswerCount);
 }
