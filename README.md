@@ -15,6 +15,7 @@
 ### Инструкция по установке и запуску
 ```
 $ git clone git@github.com:GulshatNigma/php-project-45.git
+$ cd php-project-45
 $ make install
 ```
 ### Команды
