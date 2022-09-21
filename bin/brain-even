@@ -3,6 +3,6 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-use function BrainGames\Even\checkEven;
+use function BrainGames\Even\checkEvenRun;
 
-checkEven();
+checkEvenRun();
