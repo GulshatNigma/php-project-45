@@ -7,7 +7,7 @@ use function BrainGames\Engine\isPlayerWinner;
 use function BrainGames\Engine\getUserAnswer;
 use function BrainGames\Engine\checkUserAnswer;
 
-function checkEven()
+function checkEvenRun()
 {
     $correctAnswer = "";
     $gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';

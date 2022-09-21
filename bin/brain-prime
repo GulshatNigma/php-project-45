@@ -4,8 +4,5 @@
 require_once __DIR__ . "/../vendor/autoload.php";
 
 use function BrainGames\Prime\primeRun;
-use function BrainGames\Prime\getPrimeGreeeting;
-
-getPrimeGreeeting();
 
 primeRun();

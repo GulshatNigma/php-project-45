@@ -7,7 +7,7 @@ use function BrainGames\Engine\isPlayerWinner;
 use function BrainGames\Engine\getUserAnswer;
 use function BrainGames\Engine\checkUserAnswer;
 
-function progression()
+function progressionRun()
 {
     $correctAnswer = "";
     $gameRule = "What number is missing in the progression?";
