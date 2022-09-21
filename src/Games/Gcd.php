@@ -10,7 +10,7 @@ use function BrainGames\Engine\checkUserAnswer;
 function gcdRun()
 {
     $gameRule = "Find the greatest common divisor of given numbers.";
-    getGreeting($gameRule);
+    $name = getGreeting($gameRule);
     $correctAnswerCount = 0;
 
     while ($correctAnswerCount < 3) {
@@ -27,7 +27,7 @@ function gcdRun()
             }
         }
         $correctAnswer = (string) $randomNumber1;
-        checkUserAnswer($correctAnswer, $userAnser, $correctAnswerCount);
+        checkUserAnswer($correctAnswer, $userAnser, $correctAnswerCount, $name);
     }
-    isPlayerWinner($correctAnswerCount);
+    isPlayerWinner($correctAnswerCount, $name);
 }

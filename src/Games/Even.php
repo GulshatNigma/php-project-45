@@ -11,7 +11,7 @@ function checkEvenRun()
 {
     $correctAnswer = "";
     $gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
-    getGreeting($gameRule);
+    $name = getGreeting($gameRule);
 
     $correctAnswerCount = 0;
 
@@ -20,7 +20,7 @@ function checkEvenRun()
         $userAnser = getUserAnswer($question);
 
         $question % 2 === 0 ? $correctAnswer = "yes" : $correctAnswer = "no";
-        checkUserAnswer($correctAnswer, $userAnser, $correctAnswerCount);
+        checkUserAnswer($correctAnswer, $userAnser, $correctAnswerCount, $name);
     }
-    isPlayerWinner($correctAnswerCount);
+    isPlayerWinner($correctAnswerCount, $name);
 }

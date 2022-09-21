@@ -11,7 +11,7 @@ function progressionRun()
 {
     $correctAnswer = "";
     $gameRule = "What number is missing in the progression?";
-    getGreeting($gameRule);
+    $name = getGreeting($gameRule);
 
     $correctAnswerCount = 0;
 
@@ -32,7 +32,7 @@ function progressionRun()
         $userAnser = getUserAnswer($question);
 
         $correctAnswer = (string) $correctAnswer;
-        checkUserAnswer($correctAnswer, $userAnser, $correctAnswerCount);
+        checkUserAnswer($correctAnswer, $userAnser, $correctAnswerCount, $name);
     }
-    isPlayerWinner($correctAnswerCount);
+    isPlayerWinner($correctAnswerCount, $name);
 }

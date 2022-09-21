@@ -5,13 +5,13 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function getGreeting(string $gameRule)
+function getGreeting(string $gameRule): string
 {
     line("Welcome to the Brain Games!");
-    global $name;
     $name = prompt("May I have your name?");
     line("Hello, %s", $name);
     line("{$gameRule}");
+    return $name;
 }
 
 function getUserAnswer(string &$question): string
@@ -21,22 +21,20 @@ function getUserAnswer(string &$question): string
     return $userAnser;
 }
 
-function checkUserAnswer(string $correctAnswer, string $userAnser, int &$correctAnswerCount)
+function checkUserAnswer(string $correctAnswer, string $userAnser, int &$correctAnswerCount, string $name)
 {
     if ($correctAnswer == $userAnser) {
         line("Correct!");
         return $correctAnswerCount++;
     } else {
-        global $name;
         line("'{$userAnser}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
         line("Let's try again, {$name}!");
-        exit;
+        exit();
     }
 }
 
-function isPlayerWinner(int $correctAnswerCount)
+function isPlayerWinner(int $correctAnswerCount, string $name)
 {
-    global $name;
     if ($correctAnswerCount === 3) {
         line("Congratulations, {$name}!");
     }

@@ -10,7 +10,7 @@ use function BrainGames\Engine\checkUserAnswer;
 function primeRun()
 {
     $gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    getGreeting($gameRule);
+    $name = getGreeting($gameRule);
     $correctAnswer = "no";
     $correctAnswerCount = 0;
 
@@ -27,7 +27,7 @@ function primeRun()
                 $correctAnswer = "no";
             }
         }
-        checkUserAnswer($correctAnswer, $userAnser, $correctAnswerCount);
+        checkUserAnswer($correctAnswer, $userAnser, $correctAnswerCount, $name);
     }
-    isPlayerWinner($correctAnswerCount);
+    isPlayerWinner($correctAnswerCount, $name);
 }
