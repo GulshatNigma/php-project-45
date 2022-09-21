@@ -26,11 +26,9 @@ function calculatorRun()
             case "+":
                 $correctAnswer = $randomNumber1 + $randomNumber2;
                 break;
-
             case "-":
                 $correctAnswer = $randomNumber1 - $randomNumber2;
                 break;
-
             case "*":
                 $correctAnswer = $randomNumber1 * $randomNumber2;
                 break;
@@ -38,7 +36,7 @@ function calculatorRun()
         $correctAnswer = (string) $correctAnswer;
         if (checkUserAnswer($correctAnswer, $userAnser, $correctAnswerCount, $name) === false) {
             break;
-        };
+        }
     }
     isPlayerWinner($correctAnswerCount, $name);
 }
