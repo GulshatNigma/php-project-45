@@ -29,7 +29,7 @@ function gcdRun()
         $correctAnswer = (string) $randomNumber1;
         if (checkUserAnswer($correctAnswer, $userAnser, $correctAnswerCount, $name) === false) {
             break;
-        };
+        }
     }
     isPlayerWinner($correctAnswerCount, $name);
 }
