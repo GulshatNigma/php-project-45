@@ -36,7 +36,9 @@ function calculatorRun()
                 break;
         }
         $correctAnswer = (string) $correctAnswer;
-        checkUserAnswer($correctAnswer, $userAnser, $correctAnswerCount, $name);
+        if (checkUserAnswer($correctAnswer, $userAnser, $correctAnswerCount, $name) === false) {
+            break;
+        };
     }
     isPlayerWinner($correctAnswerCount, $name);
 }

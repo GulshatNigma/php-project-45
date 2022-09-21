@@ -32,7 +32,9 @@ function progressionRun()
         $userAnser = getUserAnswer($question);
 
         $correctAnswer = (string) $correctAnswer;
-        checkUserAnswer($correctAnswer, $userAnser, $correctAnswerCount, $name);
+        if (checkUserAnswer($correctAnswer, $userAnser, $correctAnswerCount, $name) === false) {
+            break;
+        };
     }
     isPlayerWinner($correctAnswerCount, $name);
 }

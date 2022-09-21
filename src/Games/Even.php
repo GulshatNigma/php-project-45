@@ -20,7 +20,9 @@ function checkEvenRun()
         $userAnser = getUserAnswer($question);
 
         $question % 2 === 0 ? $correctAnswer = "yes" : $correctAnswer = "no";
-        checkUserAnswer($correctAnswer, $userAnser, $correctAnswerCount, $name);
+        if (checkUserAnswer($correctAnswer, $userAnser, $correctAnswerCount, $name) === false) {
+            break;
+        }
     }
     isPlayerWinner($correctAnswerCount, $name);
 }

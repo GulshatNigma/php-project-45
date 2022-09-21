@@ -29,13 +29,14 @@ function checkUserAnswer(string $correctAnswer, string $userAnser, int &$correct
     } else {
         line("'{$userAnser}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
         line("Let's try again, {$name}!");
-        exit();
+        return false;
     }
 }
 
 function isPlayerWinner(int $correctAnswerCount, string $name)
 {
-    if ($correctAnswerCount === 3) {
+    $GameScore = 3;
+    if ($correctAnswerCount === $GameScore) {
         line("Congratulations, {$name}!");
     }
 }
