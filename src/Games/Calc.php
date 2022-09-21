@@ -11,7 +11,6 @@ function calculatorRun()
 {
     $gameRule = "What is the result of the expression?";
     getGreeting($gameRule);
-    $correctAnswer = "";
     $correctAnswerCount = 0;
 
     while ($correctAnswerCount < 3) {
