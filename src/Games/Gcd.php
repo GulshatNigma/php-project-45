@@ -17,7 +17,7 @@ function gcdRun()
         $randomNumber1 = rand(1, 25);
         $randomNumber2 = rand(1, 10);
         $question = "{$randomNumber1} {$randomNumber2}";
-        $userAnser = getUserAnswer($question);
+        $userAnswer = getUserAnswer($question);
 
         while ($randomNumber1 !== $randomNumber2) {
             if ($randomNumber1 > $randomNumber2) {
@@ -27,7 +27,7 @@ function gcdRun()
             }
         }
         $correctAnswer = (string) $randomNumber1;
-        if (checkUserAnswer($correctAnswer, $userAnser, $correctAnswerCount, $name) === false) {
+        if (checkUserAnswer($correctAnswer, $userAnswer, $correctAnswerCount, $name) === false) {
             break;
         }
     }

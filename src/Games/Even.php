@@ -17,10 +17,10 @@ function checkEvenRun()
 
     while ($correctAnswerCount < 3) {
         $question = rand(1, 100);
-        $userAnser = getUserAnswer($question);
+        $userAnswer = getUserAnswer($question);
 
         $question % 2 === 0 ? $correctAnswer = "yes" : $correctAnswer = "no";
-        if (checkUserAnswer($correctAnswer, $userAnser, $correctAnswerCount, $name) === false) {
+        if (checkUserAnswer($correctAnswer, $userAnswer, $correctAnswerCount, $name) === false) {
             break;
         }
     }

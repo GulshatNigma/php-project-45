@@ -29,10 +29,10 @@ function progressionRun()
         $correctAnswer = $array[$randomIndex];
         $array[$randomIndex] = "..";
         $question = implode(" ", $array);
-        $userAnser = getUserAnswer($question);
+        $userAnswer = getUserAnswer($question);
 
         $correctAnswer = (string) $correctAnswer;
-        if (checkUserAnswer($correctAnswer, $userAnser, $correctAnswerCount, $name) === false) {
+        if (checkUserAnswer($correctAnswer, $userAnswer, $correctAnswerCount, $name) === false) {
             break;
         };
     }

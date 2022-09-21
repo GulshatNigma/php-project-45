@@ -21,13 +21,13 @@ function getUserAnswer(string &$question): string
     return $userAnser;
 }
 
-function checkUserAnswer(string $correctAnswer, string $userAnser, int &$correctAnswerCount, string $name)
+function checkUserAnswer(string $correctAnswer, string $userAnswer, int &$correctAnswerCount, string $name)
 {
-    if ($correctAnswer == $userAnser) {
+    if ($correctAnswer == $userAnswer) {
         line("Correct!");
         return $correctAnswerCount++;
     } else {
-        line("'{$userAnser}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
+        line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
         line("Let's try again, {$name}!");
         return false;
     }

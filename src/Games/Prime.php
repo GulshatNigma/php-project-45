@@ -17,7 +17,7 @@ function primeRun()
     while ($correctAnswerCount < 3) {
         $number = rand(1, 100);
         $question = $number;
-        $userAnser = getUserAnswer($question);
+        $userAnswer = getUserAnswer($question);
 
         if ($number !== 1) {
             $correctAnswer = "yes";
@@ -27,7 +27,7 @@ function primeRun()
                 $correctAnswer = "no";
             }
         }
-        if (checkUserAnswer($correctAnswer, $userAnser, $correctAnswerCount, $name) === false) {
+        if (checkUserAnswer($correctAnswer, $userAnswer, $correctAnswerCount, $name) === false) {
             break;
         };
     }
