@@ -18,7 +18,7 @@ function calculatorRun()
         $randomNumber2 = rand(1, 10);
         $arrray = ["+", "-", "*"];
         $mathematicalOperations = $arrray[array_rand($arrray)];
-        
+
         $question = ("{$randomNumber1} {$mathematicalOperations} {$randomNumber2}");
         $userAnser = getUserAnswer($question);
 
