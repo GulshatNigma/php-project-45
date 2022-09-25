@@ -35,8 +35,8 @@ function checkUserAnswer(string $correctAnswer, string $userAnswer, int &$correc
 
 function isPlayerWinner(int $correctAnswerCount, string $name)
 {
-    $GameScore = 3;
-    if ($correctAnswerCount === $GameScore) {
+    $gameScore = 3;
+    if ($correctAnswerCount === $gameScore) {
         line("Congratulations, {$name}!");
     }
 }
