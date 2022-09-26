@@ -5,7 +5,7 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function getGreeting(string $gameRule, $correctAnswer, $question): string
+function getGreeting(string $gameRule, $correctAnswer, $question)
 {
     line("Welcome to the Brain Games!");
     $name = prompt("May I have your name?");
@@ -23,12 +23,12 @@ function getGreeting(string $gameRule, $correctAnswer, $question): string
         
         if ($correctAnswer == $userAnswer) {
             line("Correct!");
-            return $correctAnswerCount++;
+            $correctAnswerCount++;
         } else {
             line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
             line("Let's try again, {$name}!");
             return false;
-
+        }
             if ($correctAnswerCount === $gameScore) {
                 line("Congratulations, {$name}!");
             }
@@ -36,4 +36,4 @@ function getGreeting(string $gameRule, $correctAnswer, $question): string
 
 
     }
-}
+
