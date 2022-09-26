@@ -26,6 +26,7 @@ function getGreeting(string $gameRule, $correctAnswer, $question)
         } else {
             line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
             line("Let's try again, {$name}!");
+            break;
         }
         if ($correctAnswerCount === $gameScore) {
             line("Congratulations, {$name}!");
