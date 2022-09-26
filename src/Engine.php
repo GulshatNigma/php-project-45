@@ -4,8 +4,9 @@ namespace BrainGames\Engine;
 
 use function cli\line;
 use function cli\prompt;
+use function BrainGames\Src\Games\Even\getQuestion;
 
-function getGreeting(string $gameRule, $correctAnswer, $question)
+function getGreeting(string $gameRule, $correctAnswer)
 {
     line("Welcome to the Brain Games!");
     $name = prompt("May I have your name?");
@@ -14,8 +15,8 @@ function getGreeting(string $gameRule, $correctAnswer, $question)
 
     $correctAnswerCount = 0;
     $gameScore = 3;
-
     while ($correctAnswerCount < 3) {
+        $question = getQuestion($correctAnswer);
         line("Question: {$question}");
         $userAnswer = prompt("You answer");
         
