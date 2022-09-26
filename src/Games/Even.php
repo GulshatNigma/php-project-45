@@ -5,17 +5,12 @@ namespace BrainGames\Src\Games\Even;
 use function BrainGames\Engine\getGreeting;
 
 
-function checkEvenRun()
+function checkEvenRun($result = true)
 {
-    $correctAnswer = "";
     $gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
     
-    function getQuestion(&$correctAnswer) {
-    $question = rand(1, 100);
-    $question % 2 === 0 ? $correctAnswer = "yes" : $correctAnswer = "no";
-    return $question;
-    }
 
-    getGreeting($gameRule, $correctAnswer);
-
+        $question = rand(1, 100);
+        $question % 2 === 0 ? $correctAnswer = "yes" : $correctAnswer = "no";
+        $result = getGreeting($gameRule, $correctAnswer, $question);
 }

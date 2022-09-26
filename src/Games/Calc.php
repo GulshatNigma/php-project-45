@@ -4,11 +4,12 @@ namespace BrainGames\Src\Games\Calc;
 
 use function BrainGames\Engine\getGreeting;
 
-
 function calculatorRun()
 {
     $gameRule = "What is the result of the expression?";
+    $correctAnswer = 0;
 
+    function getQuestion(&$correctAnswer) {
         $randomNumber1 = rand(1, 25);
         $randomNumber2 = rand(1, 10);
         $arrray = ["+", "-", "*"];
@@ -27,5 +28,8 @@ function calculatorRun()
                 $correctAnswer = $randomNumber1 * $randomNumber2;
                 break;
         }
-        getGreeting($gameRule, $correctAnswer, $question);
+        return $question;
+        }
+
+        getGreeting($gameRule, $correctAnswer);
     }
