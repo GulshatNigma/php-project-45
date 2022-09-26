@@ -12,8 +12,6 @@ function getGreeting(string $gameRule, $correctAnswer, $question)
     line("Hello, %s", $name);
     line("{$gameRule}");
 
-    $gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
-
     $correctAnswerCount = 0;
     $gameScore = 3;
 
@@ -27,13 +25,11 @@ function getGreeting(string $gameRule, $correctAnswer, $question)
         } else {
             line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
             line("Let's try again, {$name}!");
-            return false;
+            break;
         }
-            if ($correctAnswerCount === $gameScore) {
-                line("Congratulations, {$name}!");
-            }
         }
-
-
+        if ($correctAnswerCount === $gameScore) {
+            line("Congratulations, {$name}!");
+        }
     }
 
