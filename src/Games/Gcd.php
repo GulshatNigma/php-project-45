@@ -2,7 +2,7 @@
 
 namespace BrainGames\Src\Games\Gcd;
 
-use function BrainGames\Engine\getGreeting;
+use function BrainGames\Src\Engine\getGreeting;
 
 function gcdRun()
 {
