@@ -18,6 +18,7 @@ function getGreeting(string $gameRule, $questionArray, $correctAnswerArray)
     while ($correctAnswerCount < $gameScore) {
         $question = $questionArray[$correctAnswerCount];
         $correctAnswer = $correctAnswerArray[$correctAnswerCount];
+
         $userAnswer = getUserAnswer($question);
 
         if (checkUserAnswer($correctAnswer, $userAnswer, $correctAnswerCount, $name) === false) {
