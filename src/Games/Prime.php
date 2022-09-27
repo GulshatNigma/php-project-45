@@ -3,33 +3,26 @@
 namespace BrainGames\Prime;
 
 use function BrainGames\Engine\getGreeting;
-use function BrainGames\Engine\isPlayerWinner;
-use function BrainGames\Engine\getUserAnswer;
-use function BrainGames\Engine\checkUserAnswer;
 
 function primeRun()
 {
     $gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    $name = getGreeting($gameRule);
-    $correctAnswer = "no";
-    $correctAnswerCount = 0;
 
-    while ($correctAnswerCount < 3) {
+    for ($i = 0; $i < 3; $i++) {
+        $correctAnswer = "no";
         $number = rand(1, 100);
         $question = $number;
-        $userAnswer = getUserAnswer($question);
 
         if ($number !== 1) {
             $correctAnswer = "yes";
         }
-        for ($i = 2; $i < $number; $i++) {
-            if ($number % $i === 0) {
+        for ($index = 2; $index < $number; $index++) {
+            if ($number % $index === 0) {
                 $correctAnswer = "no";
             }
         }
-        if (checkUserAnswer($correctAnswer, $userAnswer, $correctAnswerCount, $name) === false) {
-            break;
-        };
+        $questionArray[] = $question;
+        $correctAnswerArray[] = $correctAnswer;
     }
-    isPlayerWinner($correctAnswerCount, $name);
+    getGreeting($gameRule, $questionArray, $correctAnswerArray);
 }
