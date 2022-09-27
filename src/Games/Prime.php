@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\Prime;
+namespace BrainGames\Src\Games\Prime;
 
 use function BrainGames\Engine\getGreeting;
 

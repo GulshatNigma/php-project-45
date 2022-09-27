@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\Gcd;
+namespace BrainGames\Src\Games\Gcd;
 
 use function BrainGames\Engine\getGreeting;
 
