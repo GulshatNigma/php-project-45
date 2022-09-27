@@ -3,24 +3,18 @@
 namespace BrainGames\Progression;
 
 use function BrainGames\Engine\getGreeting;
-use function BrainGames\Engine\isPlayerWinner;
-use function BrainGames\Engine\getUserAnswer;
-use function BrainGames\Engine\checkUserAnswer;
 
 function progressionRun()
 {
-    $correctAnswer = "";
     $gameRule = "What number is missing in the progression?";
-    $name = getGreeting($gameRule);
 
-    $correctAnswerCount = 0;
-
-    while ($correctAnswerCount < 3) {
+    for ($i = 0; $i < 3; $i++) {
+        $correctAnswer = "";
         $randomNumber = rand(1, 10);
         $number = rand(1, 20);
         $array = [];
 
-        for ($i = 0; $i <= 10; $i++) {
+        for ($index = 0; $index <= 10; $index++) {
             $array[] = $number;
             $number += $randomNumber;
         }
@@ -29,12 +23,10 @@ function progressionRun()
         $correctAnswer = $array[$randomIndex];
         $array[$randomIndex] = "..";
         $question = implode(" ", $array);
-        $userAnswer = getUserAnswer($question);
-
         $correctAnswer = (string) $correctAnswer;
-        if (checkUserAnswer($correctAnswer, $userAnswer, $correctAnswerCount, $name) === false) {
-            break;
-        };
+
+        $questionArray[] = $question;
+        $correctAnswerArray[] = $correctAnswer;
     }
-    isPlayerWinner($correctAnswerCount, $name);
+    getGreeting($gameRule, $questionArray, $correctAnswerArray);
 }
