@@ -7,8 +7,11 @@ use function BrainGames\Engine\getGreeting;
 function progressionRun()
 {
     $gameRule = "What number is missing in the progression?";
+    $gameScore = 3;
+    $questionArray = [];
+    $correctAnswerArray = [];
 
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < $gameScore; $i++) {
         $correctAnswer = "";
         $randomNumber = rand(1, 10);
         $number = rand(1, 20);

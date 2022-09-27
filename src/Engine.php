@@ -5,7 +5,7 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function getGreeting(string $gameRule, $questionArray, $correctAnswerArray)
+function getGreeting(string $gameRule, array $questionArray, array $correctAnswerArray)
 {
     line("Welcome to the Brain Games!");
     $name = prompt("May I have your name?");
@@ -30,7 +30,7 @@ function getGreeting(string $gameRule, $questionArray, $correctAnswerArray)
     }
 }
 
-function getUserAnswer(&$question): string
+function getUserAnswer(string &$question): string
 {
     line("Question: {$question}");
     $userAnswer = prompt("You answer");

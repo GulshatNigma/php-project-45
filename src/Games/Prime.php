@@ -7,8 +7,11 @@ use function BrainGames\Engine\getGreeting;
 function primeRun()
 {
     $gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    $gameScore = 3;
+    $questionArray = [];
+    $correctAnswerArray = [];
 
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < $gameScore; $i++) {
         $correctAnswer = "no";
         $number = rand(1, 100);
         $question = $number;

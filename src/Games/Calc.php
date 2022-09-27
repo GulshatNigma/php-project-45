@@ -7,8 +7,11 @@ use function BrainGames\Engine\getGreeting;
 function calculatorRun()
 {
     $gameRule = "What is the result of the expression?";
+    $gameScore = 3;
+    $questionArray = [];
+    $correctAnswerArray = [];
 
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < $gameScore; $i++) {
         $randomNumber1 = rand(1, 25);
         $randomNumber2 = rand(1, 10);
         $arrray = ["+", "-", "*"];
