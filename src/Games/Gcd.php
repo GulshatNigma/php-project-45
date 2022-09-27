@@ -3,21 +3,15 @@
 namespace BrainGames\Gcd;
 
 use function BrainGames\Engine\getGreeting;
-use function BrainGames\Engine\isPlayerWinner;
-use function BrainGames\Engine\getUserAnswer;
-use function BrainGames\Engine\checkUserAnswer;
 
 function gcdRun()
 {
     $gameRule = "Find the greatest common divisor of given numbers.";
-    $name = getGreeting($gameRule);
-    $correctAnswerCount = 0;
 
-    while ($correctAnswerCount < 3) {
+    for ($i = 0; $i < 3; $i++) {
         $randomNumber1 = rand(1, 25);
         $randomNumber2 = rand(1, 10);
         $question = "{$randomNumber1} {$randomNumber2}";
-        $userAnswer = getUserAnswer($question);
 
         while ($randomNumber1 !== $randomNumber2) {
             if ($randomNumber1 > $randomNumber2) {
@@ -27,9 +21,8 @@ function gcdRun()
             }
         }
         $correctAnswer = (string) $randomNumber1;
-        if (checkUserAnswer($correctAnswer, $userAnswer, $correctAnswerCount, $name) === false) {
-            break;
-        }
+        $questionArray[] = $question;
+        $correctAnswerArray[] = $correctAnswer;
     }
-    isPlayerWinner($correctAnswerCount, $name);
+    getGreeting($gameRule, $questionArray, $correctAnswerArray);
 }
