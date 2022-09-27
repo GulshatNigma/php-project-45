@@ -3,17 +3,19 @@
 namespace BrainGames\Src\Games\Even;
 
 use function BrainGames\Engine\getGreeting;
-use function BrainGames\Engine\getUserAnswer;
-use function BrainGames\Engine\isPlayerWinner;
-use function BrainGames\Engine\checkUserAnswer;
 
 function checkEvenRun()
 {
 
     $gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
+    $even = 2;
 
+    for ($i = 0; $i < 3; $i++) {
         $question = rand(1, 100);
-        $question % 2 === 0 ? $correctAnswer = "yes" : $correctAnswer = "no";
+        $question % $even === 0 ? $correctAnswer = "yes" : $correctAnswer = "no";
 
-        getGreeting($gameRule, $correctAnswer, $question);
+        $questionArray[] = $question;
+        $correctAnswerArray[] = $correctAnswer;
+    }
+    getGreeting($gameRule, $questionArray, $correctAnswerArray);
 }
