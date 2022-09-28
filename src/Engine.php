@@ -19,32 +19,19 @@ function gameRun(string $gameRule, array $questionArray, array $correctAnswerArr
         $question = $questionArray[$correctAnswerCount];
         $correctAnswer = $correctAnswerArray[$correctAnswerCount];
 
-        $userAnswer = getUserAnswer($question);
+        line("Question: {$question}");
+        $userAnswer = prompt("You answer");
 
-        if (checkUserAnswer($correctAnswer, $userAnswer, $correctAnswerCount, $name) === false) {
+        if ($correctAnswer == $userAnswer) {
+            line("Correct!");
+            $correctAnswerCount++;
+        } else {
+            line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
+            line("Let's try again, {$name}!");
             break;
         }
     }
     if ($correctAnswerCount === $gameScore) {
         line("Congratulations, {$name}!");
-    }
-}
-
-function getUserAnswer(string &$question): string
-{
-    line("Question: {$question}");
-    $userAnswer = prompt("You answer");
-    return $userAnswer;
-}
-
-function checkUserAnswer(string $correctAnswer, string $userAnswer, int &$correctAnswerCount, string $name)
-{
-    if ($correctAnswer == $userAnswer) {
-        line("Correct!");
-        return $correctAnswerCount++;
-    } else {
-        line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
-        line("Let's try again, {$name}!");
-        return false;
     }
 }
