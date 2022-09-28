@@ -2,11 +2,10 @@
 
 namespace BrainGames\Src\Games\Even;
 
-use function BrainGames\Src\Engine\getGreeting;
+use function BrainGames\Src\Engine\gameRun;
 
 function checkEvenRun()
 {
-
     $gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
     $even = 2;
     $gameScore = 3;
@@ -20,5 +19,5 @@ function checkEvenRun()
         $questionArray[] = $question;
         $correctAnswerArray[] = $correctAnswer;
     }
-    getGreeting($gameRule, $questionArray, $correctAnswerArray);
+    gameRun($gameRule, $questionArray, $correctAnswerArray);
 }

@@ -2,7 +2,7 @@
 
 namespace BrainGames\Src\Games\Prime;
 
-use function BrainGames\Src\Engine\getGreeting;
+use function BrainGames\Src\Engine\gameRun;
 
 function primeRun()
 {
@@ -27,5 +27,5 @@ function primeRun()
         $questionArray[] = $question;
         $correctAnswerArray[] = $correctAnswer;
     }
-    getGreeting($gameRule, $questionArray, $correctAnswerArray);
+    gameRun($gameRule, $questionArray, $correctAnswerArray);
 }

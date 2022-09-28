@@ -2,7 +2,7 @@
 
 namespace BrainGames\Src\Games\Progression;
 
-use function BrainGames\Src\Engine\getGreeting;
+use function BrainGames\Src\Engine\gameRun;
 
 function progressionRun()
 {
@@ -32,5 +32,5 @@ function progressionRun()
         $questionArray[] = $question;
         $correctAnswerArray[] = $correctAnswer;
     }
-    getGreeting($gameRule, $questionArray, $correctAnswerArray);
+    gameRun($gameRule, $questionArray, $correctAnswerArray);
 }

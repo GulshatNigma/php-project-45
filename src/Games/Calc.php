@@ -2,7 +2,7 @@
 
 namespace BrainGames\Src\Games\Calc;
 
-use function BrainGames\Src\Engine\getGreeting;
+use function BrainGames\Src\Engine\gameRun;
 
 function calculatorRun()
 {
@@ -33,5 +33,5 @@ function calculatorRun()
         $questionArray[] = $question;
         $correctAnswerArray[] = $correctAnswer;
     }
-    getGreeting($gameRule, $questionArray, $correctAnswerArray);
+    gameRun($gameRule, $questionArray, $correctAnswerArray);
 }
