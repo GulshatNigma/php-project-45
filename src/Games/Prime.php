@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\Src\Games\Prime;
+namespace BrainGames\Games\Prime;
 
-use function BrainGames\Src\Engine\gameRun;
+use function BrainGames\Engine\gameRun;
 
 function primeRun()
 {

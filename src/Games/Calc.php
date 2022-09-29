@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\Src\Games\Calc;
+namespace BrainGames\Games\Calc;
 
-use function BrainGames\Src\Engine\gameRun;
+use function BrainGames\Engine\gameRun;
 
 function calculatorRun()
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\Src\Games\Progression;
+namespace BrainGames\Games\Progression;
 
-use function BrainGames\Src\Engine\gameRun;
+use function BrainGames\Engine\gameRun;
 
 function progressionRun()
 {

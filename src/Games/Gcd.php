@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\Src\Games\Gcd;
+namespace BrainGames\Games\Gcd;
 
-use function BrainGames\Src\Engine\gameRun;
+use function BrainGames\Engine\gameRun;
 
 function gcdRun()
 {
