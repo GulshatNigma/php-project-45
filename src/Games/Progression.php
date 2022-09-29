@@ -25,7 +25,7 @@ function runProgression()
 
         $randomIndex = array_rand($progression);
         $correctAnswer = $progression[$randomIndex];
-        $array[$randomIndex] = "..";
+        $progression[$randomIndex] = "..";
         $question = implode(" ", $progression);
         $correctAnswer = (string) $correctAnswer;
 
