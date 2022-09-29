@@ -28,7 +28,8 @@ function runGame(string $gameRule, array $questions, array $correctAnswers)
             line("Let's try again, {$name}!");
             break;
         }
-            line("Correct!");
+        
+        line("Correct!");
     }
     if ($correctAnswerCount === $gameScore) {
          line("Congratulations, {$name}!");
