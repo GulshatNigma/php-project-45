@@ -4,7 +4,7 @@ namespace BrainGames\Games\Even;
 
 use function BrainGames\Engine\runGame;
 
-function checkEvenRun()
+function RunCheckEven()
 {
     $gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
     $even = 2;

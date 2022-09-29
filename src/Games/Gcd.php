@@ -4,7 +4,7 @@ namespace BrainGames\Games\Gcd;
 
 use function BrainGames\Engine\runGame;
 
-function gcdRun()
+function runGcd()
 {
     $gameRule = "Find the greatest common divisor of given numbers.";
     $gameScore = 3;

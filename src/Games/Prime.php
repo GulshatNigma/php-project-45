@@ -4,7 +4,7 @@ namespace BrainGames\Games\Prime;
 
 use function BrainGames\Engine\runGame;
 
-function primeRun()
+function runPrime()
 {
     $gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $gameScore = 3;

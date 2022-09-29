@@ -4,7 +4,7 @@ namespace BrainGames\Games\Calc;
 
 use function BrainGames\Engine\runGame;
 
-function calculatorRun()
+function runCalculator()
 {
     $gameRule = "What is the result of the expression?";
     $gameScore = 3;
