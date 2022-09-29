@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Even;
 
-use function BrainGames\Engine\gameRun;
+use function BrainGames\Engine\runGame;
 
 function checkEvenRun()
 {
@@ -19,5 +19,5 @@ function checkEvenRun()
         $questionArray[] = $question;
         $correctAnswerArray[] = $correctAnswer;
     }
-    gameRun($gameRule, $questionArray, $correctAnswerArray);
+    runGame($gameRule, $questionArray, $correctAnswerArray);
 }

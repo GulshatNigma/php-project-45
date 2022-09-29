@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Gcd;
 
-use function BrainGames\Engine\gameRun;
+use function BrainGames\Engine\runGame;
 
 function gcdRun()
 {
@@ -27,5 +27,5 @@ function gcdRun()
         $questionArray[] = $question;
         $correctAnswerArray[] = $correctAnswer;
     }
-    gameRun($gameRule, $questionArray, $correctAnswerArray);
+    runGame($gameRule, $questionArray, $correctAnswerArray);
 }
