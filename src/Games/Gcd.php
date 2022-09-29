@@ -8,8 +8,8 @@ function runGcd()
 {
     $gameRule = "Find the greatest common divisor of given numbers.";
     $gameScore = 3;
-    $questionArray = [];
-    $correctAnswerArray = [];
+    $questions = [];
+    $correctAnswers = [];
 
     for ($i = 0; $i < $gameScore; $i++) {
         $randomNumber1 = rand(1, 25);
@@ -24,8 +24,8 @@ function runGcd()
             }
         }
         $correctAnswer = (string) $randomNumber1;
-        $questionArray[] = $question;
-        $correctAnswerArray[] = $correctAnswer;
+        $questions[] = $question;
+        $correctAnswers[] = $correctAnswer;
     }
-    runGame($gameRule, $questionArray, $correctAnswerArray);
+    runGame($gameRule, $questions, $correctAnswers);
 }

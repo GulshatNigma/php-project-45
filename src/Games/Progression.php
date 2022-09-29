@@ -4,33 +4,33 @@ namespace BrainGames\Games\Progression;
 
 use function BrainGames\Engine\runGame;
 
-function progressionRun()
+function runProgression()
 {
     $gameRule = "What number is missing in the progression?";
     $gameScore = 3;
-    $questionArray = [];
-    $correctAnswerArray = [];
+    $questions = [];
+    $correctAnswers = [];
 
     for ($i = 0; $i < $gameScore; $i++) {
         $correctAnswer = "";
         $progressionLength = 10;
         $randomNumber = rand(1, 10);
         $number = rand(1, 20);
-        $array = [];
+        $progression = [];
 
         for ($index = 0; $index <= $progressionLength; $index++) {
-            $array[] = $number;
+            $progression[] = $number;
             $number += $randomNumber;
         }
 
-        $randomIndex = array_rand($array);
-        $correctAnswer = $array[$randomIndex];
+        $randomIndex = array_rand($progression);
+        $correctAnswer = $progression[$randomIndex];
         $array[$randomIndex] = "..";
-        $question = implode(" ", $array);
+        $question = implode(" ", $progression);
         $correctAnswer = (string) $correctAnswer;
 
-        $questionArray[] = $question;
-        $correctAnswerArray[] = $correctAnswer;
+        $questions[] = $question;
+        $correctAnswers[] = $correctAnswer;
     }
-    runGame($gameRule, $questionArray, $correctAnswerArray);
+    runGame($gameRule, $questions, $correctAnswers);
 }

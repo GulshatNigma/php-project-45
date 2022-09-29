@@ -8,8 +8,8 @@ function runPrime()
 {
     $gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $gameScore = 3;
-    $questionArray = [];
-    $correctAnswerArray = [];
+    $questions = [];
+    $correctAnswers = [];
 
     for ($i = 0; $i < $gameScore; $i++) {
         $correctAnswer = "no";
@@ -24,8 +24,8 @@ function runPrime()
                 $correctAnswer = "no";
             }
         }
-        $questionArray[] = $question;
-        $correctAnswerArray[] = $correctAnswer;
+        $questions[] = $question;
+        $correctAnswers[] = $correctAnswer;
     }
-    runGame($gameRule, $questionArray, $correctAnswerArray);
+    runGame($gameRule, $questions, $correctAnswers);
 }
