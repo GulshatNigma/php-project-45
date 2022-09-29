@@ -10,7 +10,7 @@ function runGame(string $gameRule, array $questionArray, array $correctAnswerArr
     line("Welcome to the Brain Games!");
     $name = prompt("May I have your name?");
     line("Hello, %s", $name);
-    line("{$gameRule}");
+    line($gameRule);
 
     $correctAnswerCount = 0;
     $gameScore = 3;
