@@ -12,13 +12,11 @@ function runGame(string $gameRule, array $questions, array $correctAnswers)
     line("Hello, %s", $name);
     line($gameRule);
 
-    $correctAnswerCount = 0;
     $gameScore = 3;
 
-    while ($correctAnswerCount < $gameScore) {
-        $question = $questions[$correctAnswerCount];
-        $correctAnswer = $correctAnswers[$correctAnswerCount];
-        $correctAnswerCount++;
+    for($i=0; $i < $gameScore; $i++) {
+        $question = $questions[$i];
+        $correctAnswer = $correctAnswers[$i];
 
         line("Question: {$question}");
         $userAnswer = prompt("You answer");
@@ -26,11 +24,9 @@ function runGame(string $gameRule, array $questions, array $correctAnswers)
         if ($correctAnswer != $userAnswer) {
             line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
             line("Let's try again, {$name}!");
-            break;
+            return;
         }
         line("Correct!");
     }
-    if ($correctAnswerCount === $gameScore) {
-         line("Congratulations, {$name}!");
-    }
+        line("Congratulations, {$name}!");
 }
