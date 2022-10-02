@@ -23,7 +23,7 @@ function calculator(int $randomNumber1, int $randomNumber2, string $mathematical
             $correctAnswer = $randomNumber1 * $randomNumber2;
             break;
         default:
-            throw new Exception("Error: unknown mathematical operation '{$mathematicalOperations}'");
+            throw new Exception("Unknown mathematical operation '{$mathematicalOperations}'");
     }
     return $correctAnswer;
 }
