@@ -18,15 +18,13 @@ function RunCheckEven(int $question): string
 
 function launchTheGame()
 {
-    $questions = [];
-    $correctAnswers = [];
+    $gameData = [];
 
     for ($i = 0; $i < GAME_SCORE; $i++) {
         $question = rand(1, 100);
         $correctAnswer = RunCheckEven($question);
 
-        $questions[] = $question;
-        $correctAnswers[] = $correctAnswer;
+        $gameData[] = [$question, $correctAnswer];
     }
-    runGame(GAME_RULE, $questions, $correctAnswers);
+    runGame(GAME_RULE, $gameData);
 }

@@ -27,8 +27,7 @@ function runPrime(int $number)
 
 function launchTheGame()
 {
-    $questions = [];
-    $correctAnswers = [];
+    $gameData = [];
 
     for ($i = 0; $i < GAME_SCORE; $i++) {
         $number = rand(1, 100);
@@ -36,8 +35,7 @@ function launchTheGame()
 
         $correctAnswer = runPrime($number);
 
-        $questions[] = $question;
-        $correctAnswers[] = $correctAnswer;
+        $gameData[] = [$question, $correctAnswer];
     }
-    runGame(GAME_RULE, $questions, $correctAnswers);
+    runGame(GAME_RULE, $gameData);
 }

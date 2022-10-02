@@ -7,7 +7,7 @@ use function cli\prompt;
 
 const GAME_SCORE = 3;
 
-function runGame(string $gameRule, array $questions, array $correctAnswers)
+function runGame(string $gameRule, array $gameData)
 {
     line("Welcome to the Brain Games!");
     $name = prompt("May I have your name?");
@@ -15,8 +15,7 @@ function runGame(string $gameRule, array $questions, array $correctAnswers)
     line($gameRule);
 
     for ($i = 0; $i < GAME_SCORE; $i++) {
-        $question = $questions[$i];
-        $correctAnswer = $correctAnswers[$i];
+        [$question, $correctAnswer] = $gameData[$i];
 
         line("Question: {$question}");
         $userAnswer = prompt("You answer");

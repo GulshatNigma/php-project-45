@@ -22,8 +22,7 @@ function runGcd(int $randomNumber1, int $randomNumber2): string
 
 function launchTheGame()
 {
-    $questions = [];
-    $correctAnswers = [];
+    $gameData = [];
 
     for ($i = 0; $i < GAME_SCORE; $i++) {
         $randomNumber1 = rand(1, 25);
@@ -32,8 +31,7 @@ function launchTheGame()
 
         $correctAnswer = runGcd($randomNumber1, $randomNumber2);
 
-        $questions[] = $question;
-        $correctAnswers[] = $correctAnswer;
+        $gameData[] = [$question, $correctAnswer];
     }
-    runGame(GAME_RULE, $questions, $correctAnswers);
+    runGame(GAME_RULE, $gameData = []);
 }

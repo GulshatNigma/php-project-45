@@ -24,8 +24,7 @@ function getProgression()
 
 function launchTheGame()
 {
-    $questions = [];
-    $correctAnswers = [];
+    $gameData = [];
 
     for ($i = 0; $i < GAME_SCORE; $i++) {
         $progression = getProgression();
@@ -37,8 +36,7 @@ function launchTheGame()
 
         $question = implode(" ", $progression);
 
-        $questions[] = $question;
-        $correctAnswers[] = $correctAnswer;
+        $gameData[] = [$question, $correctAnswer];
     }
-    runGame(GAME_RULE, $questions, $correctAnswers);
+    runGame(GAME_RULE, $gameData);
 }

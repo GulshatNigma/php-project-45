@@ -30,8 +30,7 @@ function calculator(int $randomNumber1, int $randomNumber2, string $mathematical
 
 function launchTheGame()
 {
-    $questions = [];
-    $correctAnswers = [];
+    $gameData = [];
 
     for ($i = 0; $i < GAME_SCORE; $i++) {
         $randomNumber1 = rand(1, 25);
@@ -42,8 +41,7 @@ function launchTheGame()
         $question = ("{$randomNumber1} {$mathematicalOperations} {$randomNumber2}");
         $correctAnswer = calculator($randomNumber1, $randomNumber2, $mathematicalOperations);
 
-        $questions[] = $question;
-        $correctAnswers[] = $correctAnswer;
+        $gameData[] = [$question, $correctAnswer];
     }
-    runGame(GAME_RULE, $questions, $correctAnswers);
+    runGame(GAME_RULE, $gameData);
 }
