@@ -10,16 +10,16 @@ const GAME_RULE = 'What number is missing in the progression?';
 
 function getProgression()
 {
-        $progressionLength = 10;
-        $progressionNumber = rand(1, 20);
-        $progressionDifference = rand(1, 10);
-        $progression = [];
+    $progressionLength = 10;
+    $progressionNumber = rand(1, 20);
+    $progressionDifference = rand(1, 10);
+    $progression = [];
 
-        for ($i = 0; $i <= $progressionLength; $i++) {
-            $progression[] = $progressionNumber;
-            $progressionNumber += $progressionDifference;
-        }
-        return $progression;
+    for ($i = 0; $i <= $progressionLength; $i++) {
+        $progression[] = $progressionNumber;
+        $progressionNumber += $progressionDifference;
+    }
+    return $progression;
 }
 
 function launchTheGame()

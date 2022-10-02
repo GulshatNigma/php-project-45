@@ -31,7 +31,7 @@ function launchTheGame()
         $question = "{$randomNumber1} {$randomNumber2}";
 
         $correctAnswer = runGcd($randomNumber1, $randomNumber2);
-        
+
         $questions[] = $question;
         $correctAnswers[] = $correctAnswer;
     }

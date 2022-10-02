@@ -15,9 +15,9 @@ function runPrime(int $number)
     if ($number < 2) {
         return $correctAnswer = "no";
     }
-        
+
     for ($index = 2; $index <= sqrt($number); $index++) {
-         if ($number % $index === 0) {
+        if ($number % $index === 0) {
             return $correctAnswer = "no";
         }
     }
@@ -35,7 +35,7 @@ function launchTheGame()
         $question = $number;
 
         $correctAnswer = runPrime($number);
-        
+
         $questions[] = $question;
         $correctAnswers[] = $correctAnswer;
     }

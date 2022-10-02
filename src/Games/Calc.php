@@ -24,9 +24,9 @@ function calculator(int $randomNumber1, int $randomNumber2, string $mathematical
             break;
         default:
             throw new Exception("Error: unknown mathematical operation '{$mathematicalOperations}'");
-        }
-        return $correctAnswer;
-} 
+    }
+    return $correctAnswer;
+}
 
 function launchTheGame()
 {
@@ -41,7 +41,7 @@ function launchTheGame()
 
         $question = ("{$randomNumber1} {$mathematicalOperations} {$randomNumber2}");
         $correctAnswer = calculator($randomNumber1, $randomNumber2, $mathematicalOperations);
-        
+
         $questions[] = $question;
         $correctAnswers[] = $correctAnswer;
     }

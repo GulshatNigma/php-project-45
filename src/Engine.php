@@ -14,7 +14,7 @@ function runGame(string $gameRule, array $questions, array $correctAnswers)
     line("Hello, %s", $name);
     line($gameRule);
 
-    for($i=0; $i < GAME_SCORE; $i++) {
+    for ($i = 0; $i < GAME_SCORE; $i++) {
         $question = $questions[$i];
         $correctAnswer = $correctAnswers[$i];
 
