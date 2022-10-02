@@ -8,24 +8,34 @@ use const BrainGames\Engine\GAME_SCORE;
 
 const GAME_RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-function runPrime()
+function runPrime(int $number)
+{
+    $correctAnswer = "yes";
+
+    if ($number < 2) {
+        return $correctAnswer = "no";
+    }
+        
+    for ($index = 2; $index <= sqrt($number); $index++) {
+         if ($number % $index === 0) {
+            return $correctAnswer = "no";
+        }
+    }
+    return $correctAnswer;
+}
+
+
+function launchTheGame()
 {
     $questions = [];
     $correctAnswers = [];
 
     for ($i = 0; $i < GAME_SCORE; $i++) {
-        $correctAnswer = "no";
         $number = rand(1, 100);
         $question = $number;
 
-        if ($number !== 1) {
-            $correctAnswer = "yes";
-        }
-        for ($index = 2; $index < $number; $index++) {
-            if ($number % $index === 0) {
-                $correctAnswer = "no";
-            }
-        }
+        $correctAnswer = runPrime($number);
+        
         $questions[] = $question;
         $correctAnswers[] = $correctAnswer;
     }

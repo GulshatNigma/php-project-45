@@ -10,7 +10,7 @@ use const BrainGames\Engine\GAME_SCORE;
 
 const GAME_RULE = 'What is the result of the expression?';
 
-function calculator(int $randomNumber1, int $randomNumber2, string $mathematicalOperations): string //имя функции - глагол
+function calculator(int $randomNumber1, int $randomNumber2, string $mathematicalOperations): string
 {
     switch ($mathematicalOperations) {
         case "+":
@@ -28,7 +28,7 @@ function calculator(int $randomNumber1, int $randomNumber2, string $mathematical
         return $correctAnswer;
 } 
 
-function runCalculator()
+function launchTheGame()
 {
     $questions = [];
     $correctAnswers = [];

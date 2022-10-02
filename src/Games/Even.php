@@ -8,15 +8,22 @@ use const BrainGames\Engine\GAME_SCORE;
 
 const GAME_RULE = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-function RunCheckEven()
+function RunCheckEven(int $question): string
 {
     $even = 2;
+    $question % $even === 0 ? $correctAnswer = "yes" : $correctAnswer = "no";
+    return $correctAnswer;
+}
+
+
+function launchTheGame()
+{
     $questions = [];
     $correctAnswers = [];
 
     for ($i = 0; $i < GAME_SCORE; $i++) {
         $question = rand(1, 100);
-        $question % $even === 0 ? $correctAnswer = "yes" : $correctAnswer = "no";
+        $correctAnswer = RunCheckEven($question);
 
         $questions[] = $question;
         $correctAnswers[] = $correctAnswer;
