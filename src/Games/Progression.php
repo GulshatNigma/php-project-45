@@ -31,9 +31,7 @@ function launchTheGame()
 
         $randomIndex = array_rand($progression);
         $correctAnswer = $progression[$randomIndex];
-
         $progression[$randomIndex] = "..";
-
         $question = implode(" ", $progression);
 
         $gameData[] = [$question, $correctAnswer];

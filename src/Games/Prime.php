@@ -8,7 +8,7 @@ use const BrainGames\Engine\GAME_SCORE;
 
 const GAME_RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-function runPrime(int $number)
+function findPrime(int $number)
 {
     $correctAnswer = "yes";
 
@@ -31,9 +31,9 @@ function launchTheGame()
 
     for ($i = 0; $i < GAME_SCORE; $i++) {
         $number = rand(1, 100);
+        
         $question = $number;
-
-        $correctAnswer = runPrime($number);
+        $correctAnswer = findPrime($number);
 
         $gameData[] = [$question, $correctAnswer];
     }
