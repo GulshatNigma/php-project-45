@@ -2,7 +2,27 @@
 
 namespace BrainGames\Games\Calc;
 
+use Exception;
+
 use function BrainGames\Engine\runGame;
+
+function calculator(int $randomNumber1, int $randomNumber2, string $mathematicalOperations): string //имя функции - глагол
+{
+    switch ($mathematicalOperations) {
+        case "+":
+            $correctAnswer = $randomNumber1 + $randomNumber2;
+            break;
+        case "-":
+            $correctAnswer = $randomNumber1 - $randomNumber2;
+            break;
+        case "*":
+            $correctAnswer = $randomNumber1 * $randomNumber2;
+            break;
+        default:
+            throw new Exception("Error: unknown mathematical operation '{$mathematicalOperations}'");
+        }
+        return $correctAnswer;
+} 
 
 function runCalculator()
 {
@@ -18,18 +38,8 @@ function runCalculator()
         $mathematicalOperations = $operations[array_rand($operations)];
 
         $question = ("{$randomNumber1} {$mathematicalOperations} {$randomNumber2}");
-
-        switch ($mathematicalOperations) {
-            case "+":
-                $correctAnswer = $randomNumber1 + $randomNumber2;
-                break;
-            case "-":
-                $correctAnswer = $randomNumber1 - $randomNumber2;
-                break;
-            case "*":
-                $correctAnswer = $randomNumber1 * $randomNumber2;
-                break;
-        }
+        $correctAnswer = calculator($randomNumber1, $randomNumber2, $mathematicalOperations);
+        
         $questions[] = $question;
         $correctAnswers[] = $correctAnswer;
     }
