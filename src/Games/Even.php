@@ -6,7 +6,7 @@ use function BrainGames\Engine\runGame;
 
 use const BrainGames\Engine\GAME_SCORE;
 
-const GAME_RULE = 'Answer "yes" if the number is even, otherwise answer "no".';
+const GAME_RULE = 'Answer "yes" if the number is even otherwise answer "no".';
 
 function checkEven(int $question): string
 {
