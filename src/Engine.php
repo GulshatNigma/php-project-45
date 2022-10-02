@@ -5,6 +5,8 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
+const GAME_SCORE = 3;
+
 function runGame(string $gameRule, array $questions, array $correctAnswers)
 {
     line("Welcome to the Brain Games!");
@@ -12,9 +14,7 @@ function runGame(string $gameRule, array $questions, array $correctAnswers)
     line("Hello, %s", $name);
     line($gameRule);
 
-    $gameScore = 3;
-
-    for($i=0; $i < $gameScore; $i++) {
+    for($i=0; $i < GAME_SCORE; $i++) {
         $question = $questions[$i];
         $correctAnswer = $correctAnswers[$i];
 

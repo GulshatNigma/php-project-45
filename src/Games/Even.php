@@ -4,20 +4,22 @@ namespace BrainGames\Games\Even;
 
 use function BrainGames\Engine\runGame;
 
+use const BrainGames\Engine\GAME_SCORE;
+
+const GAME_RULE = 'Answer "yes" if the number is even, otherwise answer "no".';
+
 function RunCheckEven()
 {
-    $gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
     $even = 2;
-    $gameScore = 3;
     $questions = [];
     $correctAnswers = [];
 
-    for ($i = 0; $i < $gameScore; $i++) {
+    for ($i = 0; $i < GAME_SCORE; $i++) {
         $question = rand(1, 100);
         $question % $even === 0 ? $correctAnswer = "yes" : $correctAnswer = "no";
 
         $questions[] = $question;
         $correctAnswers[] = $correctAnswer;
     }
-    runGame($gameRule, $questions, $correctAnswers);
+    runGame(GAME_RULE, $questions, $correctAnswers);
 }

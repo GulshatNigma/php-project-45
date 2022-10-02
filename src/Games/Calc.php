@@ -6,6 +6,10 @@ use Exception;
 
 use function BrainGames\Engine\runGame;
 
+use const BrainGames\Engine\GAME_SCORE;
+
+const GAME_RULE = 'What is the result of the expression?';
+
 function calculator(int $randomNumber1, int $randomNumber2, string $mathematicalOperations): string //имя функции - глагол
 {
     switch ($mathematicalOperations) {
@@ -26,12 +30,10 @@ function calculator(int $randomNumber1, int $randomNumber2, string $mathematical
 
 function runCalculator()
 {
-    $gameRule = "What is the result of the expression?";
-    $gameScore = 3;
     $questions = [];
     $correctAnswers = [];
 
-    for ($i = 0; $i < $gameScore; $i++) {
+    for ($i = 0; $i < GAME_SCORE; $i++) {
         $randomNumber1 = rand(1, 25);
         $randomNumber2 = rand(1, 10);
         $operations = ["+", "-", "*"];
@@ -43,5 +45,5 @@ function runCalculator()
         $questions[] = $question;
         $correctAnswers[] = $correctAnswer;
     }
-    runGame($gameRule, $questions, $correctAnswers);
+    runGame(GAME_RULE, $questions, $correctAnswers);
 }

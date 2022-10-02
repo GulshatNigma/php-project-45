@@ -4,14 +4,16 @@ namespace BrainGames\Games\Progression;
 
 use function BrainGames\Engine\runGame;
 
+use const BrainGames\Engine\GAME_SCORE;
+
+const GAME_RULE = 'What number is missing in the progression?';
+
 function runProgression()
 {
-    $gameRule = "What number is missing in the progression?";
-    $gameScore = 3;
     $questions = [];
     $correctAnswers = [];
 
-    for ($i = 0; $i < $gameScore; $i++) {
+    for ($i = 0; $i < GAME_SCORE; $i++) {
         $correctAnswer = "";
         $progressionLength = 10;
         $randomNumber = rand(1, 10);
@@ -32,5 +34,5 @@ function runProgression()
         $questions[] = $question;
         $correctAnswers[] = $correctAnswer;
     }
-    runGame($gameRule, $questions, $correctAnswers);
+    runGame(GAME_RULE, $questions, $correctAnswers);
 }
