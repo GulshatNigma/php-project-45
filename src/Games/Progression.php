@@ -22,7 +22,7 @@ function getProgression()
     return $progression;
 }
 
-function launchTheGame()
+function startGame()
 {
     $gameData = [];
 

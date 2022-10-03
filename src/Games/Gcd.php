@@ -18,10 +18,10 @@ function findGcd(int $randomNumber1, int $randomNumber2): string
         }
     }
     $correctAnswer = (string) $randomNumber1;
-    return $correctAnswer;
+    return (string) $correctAnswer;
 }
 
-function launchTheGame()
+function startGame()
 {
     $gameData = [];
 

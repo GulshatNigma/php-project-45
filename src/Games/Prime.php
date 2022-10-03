@@ -23,7 +23,7 @@ function isPrime(int $number)
 }
 
 
-function launchTheGame()
+function startGame()
 {
     $gameData = [];
 

@@ -16,7 +16,7 @@ function checkEven(int $question): string
 }
 
 
-function launchTheGame()
+function startGame()
 {
     $gameData = [];
 

@@ -28,7 +28,7 @@ function calculator(int $randomNumber1, int $randomNumber2, string $mathematical
     return $correctAnswer;
 }
 
-function launchTheGame()
+function startGame()
 {
     $gameData = [];
 
