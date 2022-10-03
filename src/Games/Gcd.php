@@ -17,8 +17,7 @@ function findGcd(int $randomNumber1, int $randomNumber2): string
             $randomNumber2 -= $randomNumber1;
         }
     }
-    $correctAnswer = (string) $randomNumber1;
-    return (string) $correctAnswer;
+    return $randomNumber1;
 }
 
 function startGame()
