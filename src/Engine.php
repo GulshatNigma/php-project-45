@@ -27,5 +27,5 @@ function runGame(string $gameRule, array $gameData)
         }
         line("Correct!");
     }
-        line("Congratulations, {$name}!");
+    line("Congratulations, {$name}!");
 }
