@@ -10,22 +10,18 @@ use const BrainGames\Engine\GAME_SCORE;
 
 const GAME_RULE = 'What is the result of the expression?';
 
-function calculator(int $randomNumber1, int $randomNumber2, string $mathematicalOperations): string
+function calculate(int $number1, int $number2, string $mathematicalOperation): string
 {
-    switch ($mathematicalOperations) {
+    switch ($mathematicalOperation) {
         case "+":
-            $correctAnswer = $randomNumber1 + $randomNumber2;
-            break;
+            return $number1 + $number2;
         case "-":
-            $correctAnswer = $randomNumber1 - $randomNumber2;
-            break;
+            return $number1 - $number2;
         case "*":
-            $correctAnswer = $randomNumber1 * $randomNumber2;
-            break;
+            return $number1 * $number2;
         default:
-            throw new Exception("Unknown mathematical operation '{$mathematicalOperations}'");
+            throw new Exception("Unknown mathematical operation '{$mathematicalOperation}'");
     }
-    return $correctAnswer;
 }
 
 function startGame()
@@ -33,13 +29,13 @@ function startGame()
     $gameData = [];
 
     for ($i = 0; $i < GAME_SCORE; $i++) {
-        $randomNumber1 = rand(1, 25);
-        $randomNumber2 = rand(1, 10);
+        $number1 = rand(1, 25);
+        $number2 = rand(1, 10);
         $operations = ["+", "-", "*"];
-        $mathematicalOperations = $operations[array_rand($operations)];
+        $mathematicalOperation = $operations[array_rand($operations)];
 
-        $question = ("{$randomNumber1} {$mathematicalOperations} {$randomNumber2}");
-        $correctAnswer = calculator($randomNumber1, $randomNumber2, $mathematicalOperations);
+        $question = ("{$$number1} {$mathematicalOperation} {$number2}");
+        $correctAnswer = calculate($number1, $number2, $mathematicalOperation);
 
         $gameData[] = [$question, $correctAnswer];
     }
