@@ -8,7 +8,7 @@ use const BrainGames\Engine\GAME_SCORE;
 
 const GAME_RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-function isPrime(int $number)
+function isPrime(int $number): bool
 {
     if ($number < 2) {
         return false;
