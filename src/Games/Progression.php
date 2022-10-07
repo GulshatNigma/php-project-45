@@ -30,7 +30,7 @@ function startGame()
         $progression = getProgression();
 
         $randomIndex = array_rand($progression);
-        $correctAnswer = $progression[$randomIndex];
+        $correctAnswer = (string) $progression[$randomIndex];
         $progression[$randomIndex] = "..";
         $question = implode(" ", $progression);
 
