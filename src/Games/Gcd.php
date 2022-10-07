@@ -8,7 +8,7 @@ use const BrainGames\Engine\GAME_SCORE;
 
 const GAME_RULE = 'Find the greatest common divisor of given numbers.';
 
-function findGcd(int $number1, int $number2): string
+function getGcd(int $number1, int $number2): string
 {
     while ($number1 !== $number2) {
         if ($number1 > $number2) {
@@ -29,7 +29,7 @@ function startGame()
         $number2 = rand(1, 10);
 
         $question = "{$number1} {$number2}";
-        $correctAnswer = findGcd($number1, $number2);
+        $correctAnswer = getGcd($number1, $number2);
 
         $gameData[] = [$question, $correctAnswer];
     }
