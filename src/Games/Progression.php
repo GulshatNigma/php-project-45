@@ -8,7 +8,7 @@ use const BrainGames\Engine\GAME_SCORE;
 
 const GAME_RULE = 'What number is missing in the progression?';
 
-function getProgression()
+function getProgression(): array
 {
     $length = 10;
     $startNumber = rand(1, 20);
