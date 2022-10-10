@@ -16,8 +16,7 @@ function getProgression(): array
     $progression = [];
 
     for ($i = 0; $i <= $length; $i++) {
-        $progression[] = $startNumber;
-        $startNumber += $progressionStep;
+        $progression[] = $startNumber + $i * $progressionStep;
     }
     return $progression;
 }
