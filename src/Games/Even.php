@@ -22,7 +22,7 @@ function startGame()
         $number = rand(1, 100);
 
         $correctAnswer = isEven($number) ? "yes" : "no";
-        $question = $number;
+        $question = (string) $number;
 
         $gameData[] = [$question, $correctAnswer];
     }

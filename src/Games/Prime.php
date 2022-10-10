@@ -30,7 +30,7 @@ function startGame()
     for ($i = 0; $i < GAME_SCORE; $i++) {
         $number = rand(1, 100);
 
-        $question = $number;
+        $question = (string) $number;
         $correctAnswer = isPrime($number) ? "yes" : "no";
 
         $gameData[] = [$question, $correctAnswer];

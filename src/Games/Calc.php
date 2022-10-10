@@ -34,7 +34,7 @@ function startGame()
         $operations = ["+", "-", "*"];
         $mathematicalOperation = $operations[array_rand($operations)];
 
-        $question = ("{$number1} {$mathematicalOperation} {$number2}");
+        $question = "{$number1} {$mathematicalOperation} {$number2}";
         $correctAnswer = calculate($number1, $number2, $mathematicalOperation);
 
         $gameData[] = [$question, $correctAnswer];
